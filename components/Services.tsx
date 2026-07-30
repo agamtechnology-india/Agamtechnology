@@ -1,3 +1,4 @@
+import { services } from "@/data/services";
 import ServiceCard from "./ServiceCard";
 
 export default function Services() {
@@ -9,35 +10,13 @@ export default function Services() {
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <ServiceCard
-            title="Enterprise Networking"
-            description="Design, deployment, and support for enterprise network infrastructure."
-          />
-
-          <ServiceCard
-            title="Network Automation"
-            description="Automate repetitive network tasks using Python, Ansible, and REST APIs."
-          />
-
-          <ServiceCard
-            title="Cloud Solutions"
-            description="Cloud connectivity, migration, and hybrid cloud architecture."
-          />
-
-          <ServiceCard
-            title="Data Center"
-            description="Cisco ACI, Nexus, virtualization, and modern data center solutions."
-          />
-
-          <ServiceCard
-            title="Cyber Security"
-            description="Firewall, VPN, Zero Trust, and enterprise security best practices."
-          />
-
-          <ServiceCard
-            title="IT Consulting"
-            description="Technology strategy, architecture, and digital transformation consulting."
-          />
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
       </div>
     </section>
