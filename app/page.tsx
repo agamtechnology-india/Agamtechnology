@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <Technologies />
+      <Contact />
       <Footer />
     </main>
   );

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+    <section id="home" className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
 
       <span className="rounded-full border border-blue-500 px-4 py-2 text-sm text-blue-400">
         Welcome to Agam Technology

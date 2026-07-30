@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-slate-900 px-6 py-20">
+    <section id="why-choose-us" className="bg-slate-900 px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-12 text-center text-4xl font-bold text-white">
           Why Choose Agam Technology?

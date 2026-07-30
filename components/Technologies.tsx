@@ -2,7 +2,7 @@ import { technologies } from "@/data/technologies";
 
 export default function Technologies() {
   return (
-    <section className="bg-slate-950 px-6 py-20">
+    <section id="technologies" className="bg-slate-950 px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-12 text-center text-4xl font-bold text-white">
           Technologies We Work With

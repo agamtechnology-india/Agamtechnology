@@ -7,13 +7,12 @@ export default function Navbar() {
         </h1>
 
         <ul className="hidden gap-8 text-sm font-medium md:flex">
-          <li><a href="#" className="hover:text-blue-400">Home</a></li>
-          <li><a href="#" className="hover:text-blue-400">About</a></li>
-          <li><a href="#" className="hover:text-blue-400">Services</a></li>
-          <li><a href="#" className="hover:text-blue-400">Portfolio</a></li>
-          <li><a href="#" className="hover:text-blue-400">Contact</a></li>
-        </ul>
-
+          <li><a href="#home" className="hover:text-blue-400">Home</a></li>
+          <li><a href="#why-choose-us" className="hover:text-blue-400">About</a></li>
+          <li><a href="#services" className="hover:text-blue-400">Services</a></li>
+          <li><a href="#technologies" className="hover:text-blue-400">Technologies</a></li>
+        </ul>  
+        
         <button className="rounded-lg bg-blue-600 px-5 py-2 font-semibold hover:bg-blue-700">
           Book Consultation
         </button>
