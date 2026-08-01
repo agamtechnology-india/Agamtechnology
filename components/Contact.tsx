@@ -1,4 +1,23 @@
+"use client";
+
+import { useState } from "react";
 export default function Contact() {
+    const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState(""); 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+      if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+     setSuccessMessage("Thank you! Your message has been submitted.");
+    };
+
   return (
     <section
       id="contact"
@@ -8,7 +27,7 @@ export default function Contact() {
         <h2 className="mb-4 text-center text-4xl font-bold text-white">
           Contact Us
         </h2>
-
+        
         <p className="mb-12 text-center text-slate-400">
           Let's discuss your next networking or automation project.
         </p>
@@ -22,13 +41,17 @@ export default function Contact() {
 
             <div className="space-y-4 text-slate-300">
               <p>📧 info@agamtechnology.com</p>
-              <p>📞 +91-97112-</p>
+              <p>📞 +91-97112-34567</p>
               <p>📍 New Delhi, India</p>
             </div>
           </div>
-
+           {successMessage && (
+           <div className="mb-6 rounded-lg bg-green-600 p-4 text-white">
+            {successMessage}
+           </div>
+              )}
           {/* Contact Form */}
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="name"
@@ -40,9 +63,11 @@ export default function Contact() {
               <input
                 id="name"
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
                 className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none focus:border-blue-500"
-              />
+                />         
             </div>
 
             <div>
@@ -56,6 +81,8 @@ export default function Contact() {
               <input
                 id="email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none focus:border-blue-500"
               />
@@ -69,15 +96,20 @@ export default function Contact() {
                 Message
               </label>
 
-              <textarea
-                id="message"
-                rows={5}
-                placeholder="How can we help you?"
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none focus:border-blue-500"
-              />
+             <textarea
+              id="message"
+              rows={5}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="How can we help you?"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none focus:border-blue-500"
+             />
+              
+            
             </div>
 
             <button
+              type="submit"
               className="rounded-lg bg-blue-600 px-6 py-3 font-semibold transition hover:bg-blue-700"
             >
               Send Message
