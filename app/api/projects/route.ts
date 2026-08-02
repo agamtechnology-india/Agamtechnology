@@ -6,6 +6,7 @@ export async function GET() {
       description:
         "Automated Cisco network configuration using Python and Netmiko.",
       technologies: ["Python", "Netmiko", "Cisco IOS"],
+       status: "Completed"
     },
     {
       id: 2,
@@ -13,6 +14,7 @@ export async function GET() {
       description:
         "Designed and deployed Cisco ACI multi-tenant data center fabric.",
       technologies: ["Cisco ACI", "Nexus", "VMware"],
+       status: "Completed"
     },
     {
       id: 3,
@@ -20,6 +22,7 @@ export async function GET() {
       description:
         "Implemented Cisco SD-WAN across multiple branch offices.",
       technologies: ["Cisco SD-WAN", "Python", "REST API"],
+       status: "Completed"
     },
   ];
 

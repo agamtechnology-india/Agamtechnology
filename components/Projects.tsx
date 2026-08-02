@@ -6,6 +6,8 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
+  status: string;
+
 }
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -37,6 +39,9 @@ export default function Projects() {
       <h3 className="text-2xl font-bold text-white">
         {project.title}
       </h3>
+      <span className="mt-3 inline-block rounded-full bg-green-600 px-3 py-1 text-sm font-medium text-white">
+  {project.status}
+</span>
 
       <p className="mt-4 text-slate-300">
         {project.description}
@@ -50,8 +55,17 @@ export default function Projects() {
           >
             {tech}
           </span>
+          
         ))}
       </div>
+      <div className="mt-6">
+  <a
+  href="#"
+  className="inline-block rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700"
+>
+  View Project
+</a>
+</div>
     </div>
   ))}
 </div>    
