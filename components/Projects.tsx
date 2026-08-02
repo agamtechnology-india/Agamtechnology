@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image"; 
 import { useEffect, useState } from "react";
 interface Project {
   id: number;
@@ -7,6 +7,7 @@ interface Project {
   description: string;
   technologies: string[];
   status: string;
+  image: string;
 
 }
 export default function Projects() {
@@ -36,6 +37,13 @@ export default function Projects() {
       key={project.id}
       className="rounded-xl border border-slate-700 bg-slate-800 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500"
     >
+      <Image
+  src={project.image}
+  alt={project.title}
+  width={500}
+  height={300}
+  className="mb-4 h-48 w-full rounded-lg object-cover"
+/>
       <h3 className="text-2xl font-bold text-white">
         {project.title}
       </h3>

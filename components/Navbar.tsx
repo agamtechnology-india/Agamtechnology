@@ -1,4 +1,5 @@
 "use client";
+import ThemeToggle from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 export default function Navbar() {
@@ -24,6 +25,7 @@ export default function Navbar() {
 >
   {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
 </button>
+<ThemeToggle />
         <button className="hidden rounded-lg bg-blue-600 px-5 py-2 font-semibold hover:bg-blue-700 md:block">
           Book Consultation
         </button>

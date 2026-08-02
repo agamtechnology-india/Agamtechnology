@@ -8,7 +8,10 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import StateDemo from "@/components/StateDemo";
 import UserList from "@/components/UserList";
+
 export default function Home() {
+
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <Navbar />
