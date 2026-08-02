@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image"; 
 import { useEffect, useState } from "react";
 interface Project {
@@ -67,12 +68,12 @@ export default function Projects() {
         ))}
       </div>
       <div className="mt-6">
-  <a
-  href="#"
+  <Link
+  href={`/projects/${project.id}`}
   className="inline-block rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700"
 >
   View Project
-</a>
+</Link>
 </div>
     </div>
   ))}
