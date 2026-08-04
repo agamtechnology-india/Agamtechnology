@@ -56,6 +56,65 @@ export default async function ProjectDetails({
         <p className="mt-8 text-lg text-slate-300">
           {project.description}
         </p>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+  <div className="rounded-lg bg-slate-800 p-4">
+    <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-400">
+      Role
+    </h3>
+    <p className="mt-2 text-white">
+      {project.role}
+    </p>
+  </div>
+
+  <div className="rounded-lg bg-slate-800 p-4">
+    <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-400">
+      Duration
+    </h3>
+    <p className="mt-2 text-white">
+      {project.duration}
+    </p>
+  </div>
+
+  <div className="rounded-lg bg-slate-800 p-4">
+    <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-400">
+      Client
+    </h3>
+    <p className="mt-2 text-white">
+      {project.client}
+    </p>
+  </div>
+</div>
+        <div className="mt-8 space-y-6">
+  <div>
+    <h2 className="text-2xl font-semibold text-white">
+      Challenge
+    </h2>
+
+    <p className="mt-2 text-slate-300">
+      {project.challenge}
+    </p>
+  </div>
+
+  <div>
+    <h2 className="text-2xl font-semibold text-white">
+      Solution
+    </h2>
+
+    <p className="mt-2 text-slate-300">
+      {project.solution}
+    </p>
+  </div>
+
+  <div>
+    <h2 className="text-2xl font-semibold text-white">
+      Result
+    </h2>
+
+    <p className="mt-2 text-slate-300">
+      {project.result}
+    </p>
+  </div>
+</div>
 
         <div className="mt-8 flex flex-wrap gap-3">
           {project.technologies.map((tech) => (
@@ -66,6 +125,26 @@ export default async function ProjectDetails({
               {tech}
             </span>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-slate-700 px-6 py-3 font-semibold text-white transition hover:bg-slate-600"
+          >
+            🔗 View Source
+          </a>
+
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+          >
+            🌐 Live Demo
+          </a>
         </div>
       </div>
     </main>
