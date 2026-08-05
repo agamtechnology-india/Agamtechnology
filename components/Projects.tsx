@@ -9,10 +9,19 @@ interface Project {
   technologies: string[];
   status: string;
   image: string;
+  github: string;
+  demo: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  role: string;
+  duration: string;
+  client: string;
 
 }
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
   async function fetchProjects() {
     const response = await fetch("/api/projects");
@@ -30,10 +39,27 @@ export default function Projects() {
         <h2 className="mb-12 text-center text-4xl font-bold text-white">
           Our Projects
         </h2>
+        <div className="mb-10 flex justify-center">
+  <input
+    type="text"
+    placeholder="Search projects..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="w-full max-w-md rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none focus:border-blue-500"
+  />
+</div>
 
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-  {projects.map((project) => (
+  {projects
+  .filter((project) =>
+    project.title.toLowerCase().includes(search.toLowerCase()) ||
+    project.description.toLowerCase().includes(search.toLowerCase()) ||
+    project.technologies.some((tech) =>
+      tech.toLowerCase().includes(search.toLowerCase())
+    )
+  )
+  .map((project) => (
     <div
       key={project.id}
       className="rounded-xl border border-slate-700 bg-slate-800 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500"
