@@ -17,6 +17,10 @@ export default async function ProjectDetails({
   const project = projects.find(
     (p) => p.id === Number(id)
   );
+  const relatedProjects = projects.filter(
+  (p) => p.id !== project?.id
+);
+console.log(relatedProjects);
 
   if (!project) {
     return (
@@ -146,7 +150,58 @@ export default async function ProjectDetails({
             🌐 Live Demo
           </a>
         </div>
+        <div className="mt-16">
+  <h2 className="mb-8 text-3xl font-bold text-white">
+    Related Projects
+  </h2>
+
+  <div className="grid gap-6 md:grid-cols-2">
+    {relatedProjects.map((related) => (
+      <Link
+        key={related.id}
+        href={`/projects/${related.id}`}
+        className="rounded-xl border border-slate-700 bg-slate-800 p-6 transition hover:border-blue-500 hover:-translate-y-1"
+      >
+        <Image
+          src={related.image}
+          alt={related.title}
+          width={400}
+          height={220}
+          className="mb-4 h-48 w-full rounded-lg object-cover"
+        />
+
+        <h3 className="text-xl font-semibold text-white">
+          {related.title}
+        </h3>
+
+        <span className="mt-3 inline-block rounded-full bg-green-600 px-3 py-1 text-xs text-white">
+          {related.status}
+        </span>
+
+        <p className="mt-4 text-slate-300">
+          {related.description}
+        </p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {related.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-blue-600 px-3 py-1 text-xs text-white"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <span className="mt-6 inline-block font-semibold text-blue-400">
+          View Project →
+        </span>
+      </Link>
+    ))}
+  </div>
+</div>
       </div>
     </main>
   );
 }
+           
