@@ -41,7 +41,7 @@ export default function Contact() {
 
             <div className="space-y-4 text-slate-300">
               <p>📧 info@agamtechnology.com</p>
-              <p>📞 +91-97112-34567</p>
+              <p>📞 +91-97112-65723</p>
               <p>📍 New Delhi, India</p>
             </div>
           </div>

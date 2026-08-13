@@ -22,6 +22,18 @@ interface Project {
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [search, setSearch] = useState("");
+  const [technology, setTechnology] = useState("All");
+  const technologies = [
+    "All",
+    "Python",
+    "Netmiko",
+    "Cisco IOS",
+    "Cisco ACI",
+    "Nexus",
+    "VMware",
+    "Cisco SD-WAN",
+    "REST API",
+  ];
   useEffect(() => {
   async function fetchProjects() {
     const response = await fetch("/api/projects");
@@ -33,6 +45,26 @@ export default function Projects() {
 
   fetchProjects();
 }, []);
+
+  const filteredProjects = projects.filter((project) => {
+    const searchText = search.toLowerCase();
+
+    const matchesSearch =
+      project.title.toLowerCase().includes(searchText) ||
+      project.description.toLowerCase().includes(searchText) ||
+      project.technologies.some((tech) =>
+        tech.toLowerCase().includes(searchText)
+      );
+
+    const matchesTechnology =
+      technology === "All" ||
+      project.technologies.some(
+        (tech) => tech.toLowerCase() === technology.toLowerCase()
+      );
+
+    return matchesSearch && matchesTechnology;
+  });
+
   return (
     <section className="bg-slate-900 px-6 py-20">
       <div className="mx-auto max-w-7xl">
@@ -49,17 +81,25 @@ export default function Projects() {
   />
 </div>
 
+        <div className="mb-10 flex flex-wrap justify-center gap-3">
+          {technologies.map((tech) => (
+            <button
+              key={tech}
+              onClick={() => setTechnology(tech)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                technology === tech
+                  ? "bg-blue-600 text-white"
+                  : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+              }`}
+            >
+              {tech}
+            </button>
+          ))}
+        </div>
+
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-  {projects
-  .filter((project) =>
-    project.title.toLowerCase().includes(search.toLowerCase()) ||
-    project.description.toLowerCase().includes(search.toLowerCase()) ||
-    project.technologies.some((tech) =>
-      tech.toLowerCase().includes(search.toLowerCase())
-    )
-  )
-  .map((project) => (
+  {filteredProjects.map((project) => (
     <div
       key={project.id}
       className="rounded-xl border border-slate-700 bg-slate-800 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500"
@@ -103,6 +143,17 @@ export default function Projects() {
 </div>
     </div>
   ))}
+  {filteredProjects.length === 0 && (
+    <div className="col-span-full py-16 text-center">
+      <h3 className="text-2xl font-semibold text-white">
+        😕 No projects found
+      </h3>
+
+      <p className="mt-3 text-slate-400">
+        Try changing your search or technology filter.
+      </p>
+    </div>
+  )}
 </div>    
     </section>
   );
