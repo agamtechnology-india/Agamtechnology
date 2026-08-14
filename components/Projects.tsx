@@ -65,6 +65,11 @@ export default function Projects() {
     return matchesSearch && matchesTechnology;
   });
 
+  const resetFilters = () => {
+    setSearch("");
+    setTechnology("All");
+  };
+
   return (
     <section className="bg-slate-900 px-6 py-20">
       <div className="mx-auto max-w-7xl">
@@ -81,12 +86,12 @@ export default function Projects() {
   />
 </div>
 
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
+        <div className="mb-10 flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center">
           {technologies.map((tech) => (
             <button
               key={tech}
               onClick={() => setTechnology(tech)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
                 technology === tech
                   ? "bg-blue-600 text-white"
                   : "bg-slate-800 text-slate-300 hover:bg-slate-700"
@@ -96,6 +101,21 @@ export default function Projects() {
             </button>
           ))}
         </div>
+        <p className="mb-8 text-center text-sm text-slate-400">
+  Showing {filteredProjects.length}{" "}
+  {filteredProjects.length === 1 ? "project" : "projects"}
+</p>
+
+        {(search || technology !== "All") && (
+          <div className="mb-8 flex justify-center">
+            <button
+              onClick={resetFilters}
+              className="rounded-lg border border-slate-600 px-5 py-2 text-sm font-medium text-slate-300 transition hover:border-blue-500 hover:text-white"
+            >
+              Reset Filters
+            </button>
+          </div>
+        )}
 
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -145,13 +165,24 @@ export default function Projects() {
   ))}
   {filteredProjects.length === 0 && (
     <div className="col-span-full py-16 text-center">
-      <h3 className="text-2xl font-semibold text-white">
-        😕 No projects found
+      <div className="mx-auto max-w-md rounded-xl border border-slate-700 bg-slate-800 p-8">
+      <div className="text-5xl">😕</div>
+
+      <h3 className="mt-4 text-2xl font-semibold text-white">
+        No projects found
       </h3>
 
       <p className="mt-3 text-slate-400">
         Try changing your search or technology filter.
       </p>
+
+      <button
+        onClick={resetFilters}
+        className="mt-6 rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700"
+      >
+        Reset Filters
+      </button>
+      </div>
     </div>
   )}
 </div>    
