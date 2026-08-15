@@ -29,6 +29,9 @@ export const projects = [
     challenge: "Manual configuration across multiple Cisco devices.",
     solution: "Developed a Python and Netmiko automation solution.",
     result: "Reduced deployment time and improved consistency.",
+    duration: "Not specified",
+    role: "Not specified",
+    client: "Not specified",
   },
   {
     id: 3,
@@ -43,5 +46,8 @@ export const projects = [
     challenge: "Manual configuration across multiple Cisco devices.",
     solution: "Developed a Python and Netmiko automation solution.",
     result: "Reduced deployment time and improved consistency.",
+    duration: "Not specified",
+    role: "Not specified",
+    client: "Not specified",
   },
 ];

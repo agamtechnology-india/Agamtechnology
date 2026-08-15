@@ -20,11 +20,28 @@ export default function Projects() {
   ];
   useEffect(() => {
   async function fetchProjects() {
-    const response = await fetch("/api/projects");
+    try {
+      const response = await fetch("/api/projects", {
+        cache: "no-store",
+      });
 
-    const data = await response.json();
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch projects: ${response.status}`
+        );
+      }
 
-    setProjects(data);
+      const data = await response.json();
+
+      if (!Array.isArray(data)) {
+        throw new Error("Projects API did not return an array");
+      }
+
+      setProjects(data);
+    } catch (error) {
+      console.error("Error loading projects:", error);
+      setProjects([]);
+    }
   }
 
   fetchProjects();
