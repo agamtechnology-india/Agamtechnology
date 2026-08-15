@@ -13,7 +13,7 @@ export default function Home() {
 
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-slate-950 pt-20 text-white">
       <Navbar />
       <Hero />
       <Services />
