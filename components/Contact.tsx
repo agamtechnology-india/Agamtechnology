@@ -8,27 +8,63 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-    if (!name || !email || !message) {
-      alert("Please fill in all fields.");
+  setSuccessMessage("");
+  setErrorMessage("");
+
+  if (!name || !email || !message) {
+    setErrorMessage("Please fill in all fields.");
+    return;
+  }
+
+  try {
+    setIsSending(true);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      setErrorMessage(
+        data.message || "Unable to send your message."
+      );
       return;
     }
 
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
-
     setSuccessMessage(
-      "Thank you! Your message has been submitted."
+      "Thank you! Your message has been sent successfully."
     );
 
     setName("");
     setEmail("");
     setMessage("");
-  };
+  } catch (error) {
+    console.error("Contact form error:", error);
+
+    setErrorMessage(
+      "Something went wrong. Please try again."
+    );
+  } finally {
+    setIsSending(false);
+  }
+};
 
   return (
     <section
@@ -45,7 +81,7 @@ export default function Contact() {
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-            Let's Connect
+            Let&apos;s Connect
           </span>
 
           <h2 className="mt-5 text-4xl font-bold text-white md:text-5xl">
@@ -56,7 +92,7 @@ export default function Contact() {
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-slate-400">
-            Let's discuss your next networking, automation, cloud,
+            Let&apos;s discuss your next networking, automation, cloud,
             or infrastructure project.
           </p>
         </div>
@@ -71,7 +107,7 @@ export default function Contact() {
 
               <p className="mt-4 leading-7 text-slate-400">
                 Have a networking or automation requirement?
-                Send us a message and let's explore how Agam
+                Send us a message and let&apos;s explore how Agam
                 Technology can help.
               </p>
 
@@ -148,6 +184,11 @@ export default function Contact() {
                   {successMessage}
                 </div>
               )}
+              {errorMessage && (
+  <div className="mt-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-red-400">
+    {errorMessage}
+  </div>
+)}
 
               <div className="mt-8 grid gap-6 md:grid-cols-2">
                 <div>
@@ -206,12 +247,14 @@ export default function Contact() {
               </div>
 
               <button
-                type="submit"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20"
-              >
-                Send Message
-                <Send size={18} />
-              </button>
+  type="submit"
+  disabled={isSending}
+  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20 disabled:cursor-not-allowed disabled:opacity-60"
+>
+  {isSending ? "Sending..." : "Send Message"}
+
+  {!isSending && <Send size={18} />}
+</button>
             </form>
           </div>
         </div>

@@ -16,15 +16,15 @@ export default function Navbar() {
         {/* Company Logo */}
        <Link
   href="/"
-  className="flex h-20 w-[225px] shrink-0 items-center"
+  className="relative h-[72px] w-[225px] shrink-0"
 >
   <Image
     src="/images/agamtechnology-navbar-logo.png"
     alt="Agam Technology"
-    width={225}
-    height={80}
+    fill
     priority
-    className="h-[78px] w-[225px] object-contain object-left"
+    sizes="225px"
+    className="object-contain object-left"
   />
 </Link>
 
