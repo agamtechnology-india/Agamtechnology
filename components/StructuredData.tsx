@@ -15,12 +15,35 @@ export default function StructuredData() {
     },
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Agam Technology",
+    url: "https://www.agamtechnology.com/",
+    description:
+      "Agam Technology provides enterprise networking, network automation, SD-WAN, Cisco ACI, cloud and IT infrastructure solutions for modern businesses.",
+    publisher: {
+      "@type": "Organization",
+      name: "Agam Technology",
+      url: "https://www.agamtechnology.com/",
+    },
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(organizationSchema),
-      }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
+        }}
+      />
+    </>
   );
 }
