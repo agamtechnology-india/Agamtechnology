@@ -6,10 +6,12 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import StructuredData from "@/components/StructuredData";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 pt-20 text-white">
+      <StructuredData />
       <Navbar />
       <Hero />
       <Services />
