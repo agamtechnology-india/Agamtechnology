@@ -1,46 +1,45 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 
-interface Service {
-  id: number;
-  title: string;
-  description: string;
-}
+const services = [
+  {
+    id: 1,
+    title: "Enterprise Networking",
+    description:
+      "Design, deployment, and support for enterprise network infrastructure.",
+  },
+  {
+    id: 2,
+    title: "Network Automation",
+    description:
+      "Automate repetitive network tasks using Python, Ansible, and REST APIs.",
+  },
+  {
+    id: 3,
+    title: "Cloud Solutions",
+    description:
+      "Cloud connectivity, migration, and hybrid cloud architecture.",
+  },
+  {
+    id: 4,
+    title: "Data Center",
+    description:
+      "Cisco ACI, Nexus, virtualization, and modern data center solutions.",
+  },
+  {
+    id: 5,
+    title: "Cyber Security",
+    description:
+      "Firewall, VPN, Zero Trust, and enterprise security best practices.",
+  },
+  {
+    id: 6,
+    title: "IT Consulting",
+    description:
+      "Technology strategy, architecture, and digital transformation consulting.",
+  },
+];
 
 export default function Services() {
-  const [services, setServices] = useState<Service[]>([]);
-
-  useEffect(() => {
-    async function fetchServices() {
-      try {
-        const response = await fetch("/api/services", {
-          cache: "no-store",
-        });
-
-        if (!response.ok) {
-          throw new Error(
-            `Failed to fetch services: ${response.status}`
-          );
-        }
-
-        const data = await response.json();
-
-        if (!Array.isArray(data)) {
-          throw new Error("Services API did not return an array");
-        }
-
-        setServices(data);
-      } catch (error) {
-        console.error("Error loading services:", error);
-        setServices([]);
-      }
-    }
-
-    fetchServices();
-  }, []);
-
   return (
     <section
       id="services"
@@ -73,23 +72,15 @@ export default function Services() {
         </div>
 
         {/* Services */}
-        {services.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.id}
-                title={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-10 text-center">
-            <p className="text-slate-400">
-              No services available.
-            </p>
-          </div>
-        )}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
