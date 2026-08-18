@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -9,7 +10,61 @@ interface ProjectPageProps {
     id: string;
   }>;
 }
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { id } = await params;
 
+  const project = projects.find(
+    (p) => p.id === Number(id)
+  );
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The requested Agam Technology project could not be found.",
+    };
+  }
+
+  return {
+    title: project.title,
+    description: project.description,
+
+    keywords: [
+      "Agam Technology",
+      project.title,
+      ...project.technologies,
+      "network automation",
+      "enterprise networking",
+      "IT infrastructure",
+    ],
+
+    alternates: {
+      canonical: `https://www.agamtechnology.com/projects/${project.id}`,
+    },
+
+    openGraph: {
+      title: `${project.title} | Agam Technology`,
+      description: project.description,
+      url: `https://www.agamtechnology.com/projects/${project.id}`,
+      siteName: "Agam Technology",
+      type: "article",
+      images: [
+        {
+          url: `https://www.agamtechnology.com${project.image}`,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 export default async function ProjectDetails({
   params,
 }: ProjectPageProps) {
