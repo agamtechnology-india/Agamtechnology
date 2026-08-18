@@ -28,10 +28,10 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-slate-400">
-            We combine enterprise networking expertise, automation,
-            security, and modern infrastructure technologies to deliver
-            reliable business solutions.
-          </p>
+  We combine enterprise networking, network automation, data center,
+  cloud, SD-WAN, and security expertise to help businesses build
+  reliable, scalable, and efficient IT infrastructure.
+</p>
         </div>
 
         {/* Benefits */}

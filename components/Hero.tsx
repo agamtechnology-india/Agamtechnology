@@ -13,11 +13,12 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-        
+
         {/* Hero Content */}
         <div className="text-center lg:text-left">
+
           <span className="inline-flex rounded-full border border-blue-500/40 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-            Welcome to Agam Technology
+            Network Automation & IT Infrastructure Solutions
           </span>
 
           <h1 className="mt-8 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
@@ -31,12 +32,20 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl lg:mx-0">
-            We help businesses automate, secure, and modernize their IT
-            infrastructure through enterprise networking, cloud solutions,
-            data center technologies, and network automation.
+            Agam Technology helps businesses design, automate, secure, and
+            modernize enterprise IT infrastructure with network automation,
+            Cisco ACI, SD-WAN, cloud networking, data center, and network
+            security solutions.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-400 lg:mx-0">
+            From enterprise network design and automation to data center and
+            cloud infrastructure, we deliver practical technology solutions
+            focused on reliability, scalability, and operational efficiency.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
+
             <Link
               href="#services"
               className="rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20"
@@ -50,11 +59,15 @@ export default function Hero() {
             >
               Contact Us →
             </Link>
+
           </div>
         </div>
 
         {/* Technology Visual */}
-        <div className="relative hidden h-[450px] items-center justify-center lg:flex">
+        <div
+          className="relative hidden h-[450px] items-center justify-center lg:flex"
+          aria-hidden="true"
+        >
           <div className="absolute h-72 w-72 rounded-full border border-blue-500/20" />
           <div className="absolute h-56 w-56 rounded-full border border-cyan-400/20" />
           <div className="absolute h-40 w-40 rounded-full bg-blue-600/10 shadow-2xl shadow-blue-500/30 blur-sm" />
@@ -64,6 +77,7 @@ export default function Hero() {
               <div className="text-3xl font-bold text-blue-400">
                 AT
               </div>
+
               <div className="mt-1 text-xs tracking-widest text-slate-400">
                 NETWORK
               </div>
@@ -75,6 +89,7 @@ export default function Hero() {
           <div className="absolute bottom-24 left-32 h-3 w-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/60" />
           <div className="absolute bottom-20 right-28 h-3 w-3 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/60" />
         </div>
+
       </div>
     </section>
   );
