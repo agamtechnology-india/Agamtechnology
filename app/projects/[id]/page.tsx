@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import ProjectStructuredData from "@/components/ProjectStructuredData";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -86,7 +87,10 @@ export default async function ProjectDetails({
   }
 
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-20 text-white">
+    <>
+      <ProjectStructuredData project={project} />
+
+      <main className="min-h-screen bg-slate-950 px-6 py-20 text-white">
       <div className="mx-auto max-w-4xl">
         <Link
           href="/"
@@ -227,6 +231,7 @@ export default async function ProjectDetails({
 </div>
       </div>
     </main>
+    </>
   );
 }
            
