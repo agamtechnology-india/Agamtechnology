@@ -3,6 +3,12 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
+      url: "https://www.agamtechnology.com/services/network-automation",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.agamtechnology.com",
       lastModified: new Date(),
       changeFrequency: "weekly",

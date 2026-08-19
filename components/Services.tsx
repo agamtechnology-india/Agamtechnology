@@ -1,43 +1,14 @@
 import ServiceCard from "./ServiceCard";
+import { services } from "@/data/services";
 
-const services = [
-  {
-    id: 1,
-    title: "Enterprise Networking",
-    description:
-      "Design, deployment, and support for enterprise network infrastructure.",
-  },
-  {
-    id: 2,
-    title: "Network Automation",
-    description:
-      "Automate repetitive network tasks using Python, Ansible, and REST APIs.",
-  },
-  {
-    id: 3,
-    title: "Cloud Solutions",
-    description:
-      "Cloud connectivity, migration, and hybrid cloud architecture.",
-  },
-  {
-    id: 4,
-    title: "Data Center",
-    description:
-      "Cisco ACI, Nexus, virtualization, and modern data center solutions.",
-  },
-  {
-    id: 5,
-    title: "Cyber Security",
-    description:
-      "Firewall, VPN, Zero Trust, and enterprise security best practices.",
-  },
-  {
-    id: 6,
-    title: "IT Consulting",
-    description:
-      "Technology strategy, architecture, and digital transformation consulting.",
-  },
-];
+const serviceLinks: Record<string, string> = {
+  "Enterprise Networking": "/",
+  "Network Automation": "/services/network-automation",
+  "Cloud Solutions": "/",
+  "Data Center": "/",
+  "Cyber Security": "/",
+  "IT Consulting": "/",
+};
 
 export default function Services() {
   return (
@@ -75,9 +46,10 @@ export default function Services() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard
-              key={service.id}
+              key={service.title}
               title={service.title}
               description={service.description}
+              href={serviceLinks[service.title]}
             />
           ))}
         </div>
