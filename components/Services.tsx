@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 const serviceLinks: Record<string, string> = {
   "Enterprise Networking": "/services/enterprise-networking",
   "Network Automation": "/services/network-automation",
-  "Cloud Solutions": "/",
+  "Cloud Solutions": "/services/cloud-solutions",
   "Data Center": "/",
   "Cyber Security": "/",
   "IT Consulting": "/",
