@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projects";
-import ProjectCard from "@/components/ProjectCard";
 import ProjectStructuredData from "@/components/ProjectStructuredData";
 
 interface ProjectPageProps {
@@ -11,24 +10,28 @@ interface ProjectPageProps {
     id: string;
   }>;
 }
+
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
   const { id } = await params;
 
-  const project = projects.find(
-    (p) => p.id === Number(id)
-  );
+  const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
     return {
-      title: "Project Not Found",
-      description: "The requested Agam Technology project could not be found.",
+      title: "Project Not Found | Agam Technology",
+      description:
+        "The requested Agam Technology project could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
   return {
-    title: project.title,
+    title: `${project.title} | Agam Technology`,
     description: project.description,
 
     keywords: [
@@ -66,17 +69,17 @@ export async function generateMetadata({
     },
   };
 }
+
 export default async function ProjectDetails({
   params,
 }: ProjectPageProps) {
   const { id } = await params;
 
-  const project = projects.find(
-    (p) => p.id === Number(id)
-  );
+  const project = projects.find((p) => p.id === Number(id));
+
   const relatedProjects = projects.filter(
-  (p) => p.id !== project?.id
-);
+    (p) => p.id !== project?.id
+  );
 
   if (!project) {
     return (
@@ -91,147 +94,207 @@ export default async function ProjectDetails({
       <ProjectStructuredData project={project} />
 
       <main className="min-h-screen bg-slate-950 px-6 py-20 text-white">
-      <div className="mx-auto max-w-4xl">
-        <Link
-          href="/"
-          className="mb-8 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300"
-        >
-          <ArrowLeft size={20} />
-          Back to Home
-        </Link>
+        <div className="mx-auto max-w-4xl">
 
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={900}
-          height={500}
-          className="mb-8 w-full rounded-xl object-cover"
-        />
+          {/* Back to Home */}
+          <Link
+            href="/"
+            className="mb-8 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300"
+          >
+            <ArrowLeft size={20} />
+            Back to Home
+          </Link>
 
-        <h1 className="text-4xl font-bold">
-          {project.title}
-        </h1>
+          {/* Project Image */}
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={900}
+            height={500}
+            className="mb-8 w-full rounded-xl object-cover"
+          />
 
-        <span
-  className={`mt-4 inline-block rounded-full px-4 py-2 text-sm font-medium text-white ${
-    project.status === "Completed"
-      ? "bg-green-600"
-      : project.status === "In Progress"
-        ? "bg-yellow-600"
-        : "bg-slate-600"
-  }`}
->
-  {project.status}
-</span>
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
-    <p className="text-sm text-slate-400">
-      Role
-    </p>
-    <p className="mt-2 font-semibold text-white">
-      {project.role}
-    </p>
-  </div>
+          {/* Project Title */}
+          <h1 className="text-4xl font-bold">
+            {project.title}
+          </h1>
 
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
-    <p className="text-sm text-slate-400">
-      Duration
-    </p>
-    <p className="mt-2 font-semibold text-white">
-      {project.duration}
-    </p>
-  </div>
+          {/* Project Status */}
+          <span
+            className={`mt-4 inline-block rounded-full px-4 py-2 text-sm font-medium text-white ${
+              project.status === "Completed"
+                ? "bg-green-600"
+                : project.status === "In Progress"
+                  ? "bg-yellow-600"
+                  : "bg-slate-600"
+            }`}
+          >
+            {project.status}
+          </span>
 
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
-    <p className="text-sm text-slate-400">
-      Client
-    </p>
-    <p className="mt-2 font-semibold text-white">
-      {project.client}
-    </p>
-  </div>
-</div>
+          {/* Project Information */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
 
-        <p className="mt-8 text-lg text-slate-300">
-          {project.description}
-        </p>
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+              <p className="text-sm text-slate-400">
+                Role
+              </p>
 
-        <div className="mt-12 space-y-8">
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
-    <h2 className="text-2xl font-bold text-white">
-      Challenge
-    </h2>
-    <p className="mt-3 leading-7 text-slate-300">
-      {project.challenge}
-    </p>
-  </div>
+              <p className="mt-2 font-semibold text-white">
+                {project.role}
+              </p>
+            </div>
 
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
-    <h2 className="text-2xl font-bold text-white">
-      Solution
-    </h2>
-    <p className="mt-3 leading-7 text-slate-300">
-      {project.solution}
-    </p>
-  </div>
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+              <p className="text-sm text-slate-400">
+                Duration
+              </p>
 
-  <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
-    <h2 className="text-2xl font-bold text-white">
-      Result
-    </h2>
-    <p className="mt-3 leading-7 text-slate-300">
-      {project.result}
-    </p>
-  </div>
-</div>
+              <p className="mt-2 font-semibold text-white">
+                {project.duration}
+              </p>
+            </div>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full bg-blue-600 px-4 py-2 text-sm"
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+              <p className="text-sm text-slate-400">
+                Client
+              </p>
+
+              <p className="mt-2 font-semibold text-white">
+                {project.client}
+              </p>
+            </div>
+
+          </div>
+
+          {/* Project Description */}
+          <p className="mt-8 text-lg leading-8 text-slate-300">
+            {project.description}
+          </p>
+
+          {/* Challenge / Solution / Result */}
+          <div className="mt-12 space-y-8">
+
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
+              <h2 className="text-2xl font-bold text-white">
+                Challenge
+              </h2>
+
+              <p className="mt-3 leading-7 text-slate-300">
+                {project.challenge}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
+              <h2 className="text-2xl font-bold text-white">
+                Solution
+              </h2>
+
+              <p className="mt-3 leading-7 text-slate-300">
+                {project.solution}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
+              <h2 className="text-2xl font-bold text-white">
+                Result
+              </h2>
+
+              <p className="mt-3 leading-7 text-slate-300">
+                {project.result}
+              </p>
+            </div>
+
+          </div>
+
+          {/* Technologies */}
+          <div className="mt-8 flex flex-wrap gap-3">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full bg-blue-600 px-4 py-2 text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Related Projects */}
+          {relatedProjects.length > 0 && (
+            <section className="mt-16 border-t border-slate-800 pt-12">
+
+              <h2 className="text-3xl font-bold text-white">
+                Related Projects
+              </h2>
+
+              <p className="mt-3 text-slate-400">
+                Explore more enterprise networking and infrastructure
+                projects from Agam Technology.
+              </p>
+
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                {relatedProjects.map((relatedProject) => (
+                  <Link
+                    key={relatedProject.id}
+                    href={`/projects/${relatedProject.id}`}
+                    className="group rounded-xl border border-slate-700 bg-slate-800 p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-lg"
+                  >
+                    <h3 className="text-xl font-bold text-white transition group-hover:text-blue-400">
+                      {relatedProject.title}
+                    </h3>
+
+                    <p className="mt-3 leading-7 text-slate-400">
+                      {relatedProject.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {relatedProject.technologies.map(
+                        (technology) => (
+                          <span
+                            key={technology}
+                            className="rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm text-blue-300"
+                          >
+                            {technology}
+                          </span>
+                        )
+                      )}
+                    </div>
+
+                    <div className="mt-5 text-sm font-semibold text-blue-400">
+                      View Project →
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+            </section>
+          )}
+
+          {/* External Links */}
+          <div className="mt-10 flex flex-wrap gap-4">
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-slate-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-slate-600 hover:shadow-lg"
             >
-              {tech}
-            </span>
-          ))}
+              🔗 View Source →
+            </a>
+
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg"
+            >
+              🌐 Live Demo →
+            </a>
+
+          </div>
+
         </div>
-
-        <div className="mt-10 flex flex-wrap gap-4">
-  <a
-    href={project.github}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-lg bg-slate-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-slate-600 hover:shadow-lg"
-  >
-    🔗 View Source →
-  </a>
-
-  <a
-    href={project.demo}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg"
-  >
-    🌐 Live Demo →
-  </a>
-</div>
-        <div className="mt-16">
-  <h2 className="mb-8 text-3xl font-bold text-white">
-    Related Projects
-  </h2>
-
-  <div className="grid gap-8 md:grid-cols-2">
-    {relatedProjects.map((related) => (
-      <ProjectCard
-        key={related.id}
-        project={related}
-      />
-    ))}
-  </div>
-</div>
-      </div>
-    </main>
+      </main>
     </>
   );
 }
-           
