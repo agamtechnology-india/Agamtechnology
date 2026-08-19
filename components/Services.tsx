@@ -7,7 +7,7 @@ const serviceLinks: Record<string, string> = {
   "Cloud Solutions": "/services/cloud-solutions",
   "Data Center": "/services/data-center",
   "Cyber Security": "/services/cyber-security",
-  "IT Consulting": "/",
+  "IT Consulting": "/services/it-consulting",
 };
 
 export default function Services() {
