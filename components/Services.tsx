@@ -2,7 +2,7 @@ import ServiceCard from "./ServiceCard";
 import { services } from "@/data/services";
 
 const serviceLinks: Record<string, string> = {
-  "Enterprise Networking": "/",
+  "Enterprise Networking": "/services/enterprise-networking",
   "Network Automation": "/services/network-automation",
   "Cloud Solutions": "/",
   "Data Center": "/",
