@@ -261,7 +261,7 @@ export default async function ProjectDetails({
                     </div>
 
                     <div className="mt-5 text-sm font-semibold text-blue-400">
-                      View Project →
+                      View Project
                     </div>
                   </Link>
                 ))}
@@ -279,7 +279,7 @@ export default async function ProjectDetails({
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg bg-slate-700 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-slate-600 hover:shadow-lg"
             >
-              🔗 View Source →
+              View Source
             </a>
 
             <a
@@ -288,7 +288,7 @@ export default async function ProjectDetails({
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg"
             >
-              🌐 Live Demo →
+              Live Demo
             </a>
 
           </div>

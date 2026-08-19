@@ -56,7 +56,7 @@ export default function ProjectCard({
   href={`/projects/${project.id}`}
   className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg"
 >
-  View Project →
+  View Project
 </Link>
       </div>
       </div>
