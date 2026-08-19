@@ -5,7 +5,7 @@ const serviceLinks: Record<string, string> = {
   "Enterprise Networking": "/services/enterprise-networking",
   "Network Automation": "/services/network-automation",
   "Cloud Solutions": "/services/cloud-solutions",
-  "Data Center": "/",
+  "Data Center": "/services/data-center",
   "Cyber Security": "/",
   "IT Consulting": "/",
 };
