@@ -45,18 +45,18 @@ export const projects = [
     id: 3,
     title: "Cisco SD-WAN Deployment",
     description:
-      "Implemented Cisco SD-WAN across multiple branch offices to improve WAN connectivity, centralized management, and application-aware routing.",
+  "Cisco SD-WAN deployment and network automation project for enterprise branch networks, using centralized orchestration, application-aware routing, Python, and REST API automation.",
     technologies: ["Cisco SD-WAN", "Python", "REST API"],
     status: "Completed",
     image: "/projects/sdwan.jpg",
     github: "https://github.com/agamtechnology-india/Agamtechnology",
     demo: "https://agamtechnology.vercel.app",
     challenge:
-      "Multiple branch locations required reliable WAN connectivity and centralized control while reducing the operational complexity of managing individual branch network devices.",
+  "Multiple enterprise branch offices required reliable WAN connectivity, centralized policy management, and consistent network operations while reducing the complexity of managing individual branch devices.",
     solution:
-      "Implemented Cisco SD-WAN with centralized orchestration, policy-based routing, application-aware traffic management, and REST API based automation capabilities.",
-    result:
-      "Improved centralized WAN management, simplified branch deployment and operations, and provided greater visibility and control over enterprise network traffic.",
+  "Implemented Cisco SD-WAN with centralized orchestration, policy-based routing, application-aware traffic management, and automated network workflows using Python and REST APIs.",
+   result:
+  "Improved centralized SD-WAN management, simplified branch deployment and operations, and provided better visibility, policy control, and consistency across the enterprise WAN environment.",
     duration: "Project Based",
     role: "Senior Network Engineer",
     client: "Confidential",
