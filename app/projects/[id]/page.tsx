@@ -20,31 +20,36 @@ const projectSeo: Record<
   }
 > = {
   1: {
-    title: "Enterprise Network Automation with Python & Netmiko",
+    title: "Enterprise Network Automation Using Python & Netmiko",
     description:
-      "Enterprise network automation project using Python, Netmiko and Cisco IOS to automate configuration and operational network tasks.",
+      "Enterprise network automation project using Python, Netmiko and Cisco IOS to automate configuration, operational tasks and repeatable network workflows.",
     keywords: [
-      "network automation",
+      "enterprise network automation",
+      "network automation services",
       "Python network automation",
       "Netmiko automation",
       "Cisco network automation",
       "Cisco IOS automation",
-      "enterprise network automation",
+      "network automation using Python",
+      "Cisco automation",
       "network automation project",
     ],
   },
 
   2: {
-    title: "Cisco ACI Data Center Multi-Tenant Deployment",
+    title: "Cisco ACI Data Center Deployment & Networking",
     description:
-      "Cisco ACI data center project covering multi-tenant networking, Nexus leaf-spine infrastructure and VMware integration.",
+      "Cisco ACI data center project covering multi-tenant networking, Nexus leaf-spine infrastructure, application-centric policies and VMware integration.",
     keywords: [
       "Cisco ACI",
       "Cisco ACI data center",
+      "Cisco ACI deployment",
+      "ACI data center networking",
       "ACI multi tenant",
       "Cisco Nexus",
       "ACI VMware integration",
       "data center networking",
+      "Cisco ACI consulting",
       "Cisco ACI project",
     ],
   },
