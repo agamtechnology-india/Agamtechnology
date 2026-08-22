@@ -40,23 +40,22 @@ export const projects = [
     role: "Senior Network Engineer",
     client: "Confidential",
   },
-
-  {
+    {
     id: 3,
     title: "Cisco SD-WAN Deployment",
     description:
-  "Cisco SD-WAN deployment and network automation project for enterprise branch networks, using centralized orchestration, application-aware routing, Python, and REST API automation.",
+      "Cisco SD-WAN deployment and SD-WAN automation project for enterprise branch networks, using centralized orchestration, application-aware routing, Python, and REST API automation.",
     technologies: ["Cisco SD-WAN", "Python", "REST API"],
     status: "Completed",
     image: "/projects/sdwan.jpg",
     github: "https://github.com/agamtechnology-india/Agamtechnology",
     demo: "https://agamtechnology.vercel.app",
     challenge:
-  "Multiple enterprise branch offices required reliable WAN connectivity, centralized policy management, and consistent network operations while reducing the complexity of managing individual branch devices.",
+      "Multiple enterprise branch offices required reliable WAN connectivity, centralized policy management, and SD-WAN automation to maintain consistent network operations while reducing the complexity of managing individual branch devices.",
     solution:
-  "Implemented Cisco SD-WAN with centralized orchestration, policy-based routing, application-aware traffic management, and automated network workflows using Python and REST APIs.",
-   result:
-  "Improved centralized SD-WAN management, simplified branch deployment and operations, and provided better visibility, policy control, and consistency across the enterprise WAN environment.",
+      "Implemented Cisco SD-WAN with centralized orchestration, policy-based routing, application-aware traffic management, and SD-WAN automation using Python and REST APIs to simplify repeatable network workflows.",
+    result:
+      "Improved centralized SD-WAN management, simplified branch deployment and operations, and provided better visibility, policy control, and consistency across the enterprise WAN environment through automated network workflows.",
     duration: "Project Based",
     role: "Senior Network Engineer",
     client: "Confidential",

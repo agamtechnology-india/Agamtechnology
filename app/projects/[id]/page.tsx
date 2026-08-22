@@ -50,9 +50,9 @@ const projectSeo: Record<
   },
 
   3: {
-    title: "Cisco SD-WAN Deployment for Enterprise Branch Networks",
-    description:
-      "Cisco SD-WAN deployment project using centralized orchestration, application-aware routing, Python and REST API automation.",
+  title: "Cisco SD-WAN Automation & Deployment for Enterprise Networks",
+  description:
+    "Cisco SD-WAN automation and deployment project for enterprise networks using centralized orchestration, application-aware routing, Python and REST APIs.",
     keywords: [
       "Cisco SD-WAN",
       "SD-WAN deployment",
