@@ -11,12 +11,68 @@ interface ProjectPageProps {
   }>;
 }
 
+const projectSeo: Record<
+  number,
+  {
+    title: string;
+    description: string;
+    keywords: string[];
+  }
+> = {
+  1: {
+    title: "Enterprise Network Automation with Python & Netmiko",
+    description:
+      "Enterprise network automation project using Python, Netmiko and Cisco IOS to automate configuration and operational network tasks.",
+    keywords: [
+      "network automation",
+      "Python network automation",
+      "Netmiko automation",
+      "Cisco network automation",
+      "Cisco IOS automation",
+      "enterprise network automation",
+      "network automation project",
+    ],
+  },
+
+  2: {
+    title: "Cisco ACI Data Center Multi-Tenant Deployment",
+    description:
+      "Cisco ACI data center project covering multi-tenant networking, Nexus leaf-spine infrastructure and VMware integration.",
+    keywords: [
+      "Cisco ACI",
+      "Cisco ACI data center",
+      "ACI multi tenant",
+      "Cisco Nexus",
+      "ACI VMware integration",
+      "data center networking",
+      "Cisco ACI project",
+    ],
+  },
+
+  3: {
+    title: "Cisco SD-WAN Deployment for Enterprise Branch Networks",
+    description:
+      "Cisco SD-WAN deployment project using centralized orchestration, application-aware routing, Python and REST API automation.",
+    keywords: [
+      "Cisco SD-WAN",
+      "SD-WAN deployment",
+      "Cisco SD-WAN project",
+      "enterprise SD-WAN",
+      "SD-WAN automation",
+      "REST API network automation",
+      "Python SD-WAN automation",
+    ],
+  },
+};
+
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
   const { id } = await params;
 
-  const project = projects.find((p) => p.id === Number(id));
+  const project = projects.find(
+    (p) => p.id === Number(id)
+  );
 
   if (!project) {
     return {
@@ -30,27 +86,38 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${project.title} | Agam Technology`,
-    description: project.description,
+  const seo = projectSeo[project.id];
 
-    keywords: [
-      "Agam Technology",
-      project.title,
-      ...project.technologies,
-      "network automation",
-      "enterprise networking",
-      "IT infrastructure",
-    ],
+  const title =
+    seo?.title ?? `${project.title} | Agam Technology`;
+
+  const description =
+    seo?.description ?? project.description;
+
+  const keywords = [
+    "Agam Technology",
+    "IT infrastructure",
+    "enterprise networking",
+    ...(seo?.keywords ?? []),
+    ...project.technologies,
+  ];
+
+  const projectUrl =
+    `https://www.agamtechnology.com/projects/${project.id}`;
+
+  return {
+    title,
+    description,
+    keywords: [...new Set(keywords)],
 
     alternates: {
-      canonical: `https://www.agamtechnology.com/projects/${project.id}`,
+      canonical: projectUrl,
     },
 
     openGraph: {
-      title: `${project.title} | Agam Technology`,
-      description: project.description,
-      url: `https://www.agamtechnology.com/projects/${project.id}`,
+      title: `${title} | Agam Technology`,
+      description,
+      url: projectUrl,
       siteName: "Agam Technology",
       type: "article",
       images: [
@@ -60,6 +127,15 @@ export async function generateMetadata({
           height: 630,
           alt: project.title,
         },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Agam Technology`,
+      description,
+      images: [
+        `https://www.agamtechnology.com${project.image}`,
       ],
     },
 
@@ -75,7 +151,9 @@ export default async function ProjectDetails({
 }: ProjectPageProps) {
   const { id } = await params;
 
-  const project = projects.find((p) => p.id === Number(id));
+  const project = projects.find(
+    (p) => p.id === Number(id)
+  );
 
   const relatedProjects = projects.filter(
     (p) => p.id !== project?.id
@@ -95,8 +173,6 @@ export default async function ProjectDetails({
 
       <main className="min-h-screen bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-4xl">
-
-          {/* Back to Home */}
           <Link
             href="/"
             className="mb-8 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300"
@@ -105,7 +181,6 @@ export default async function ProjectDetails({
             Back to Home
           </Link>
 
-          {/* Project Image */}
           <Image
             src={project.image}
             alt={project.title}
@@ -114,12 +189,10 @@ export default async function ProjectDetails({
             className="mb-8 w-full rounded-xl object-cover"
           />
 
-          {/* Project Title */}
           <h1 className="text-4xl font-bold">
             {project.title}
           </h1>
 
-          {/* Project Status */}
           <span
             className={`mt-4 inline-block rounded-full px-4 py-2 text-sm font-medium text-white ${
               project.status === "Completed"
@@ -132,14 +205,11 @@ export default async function ProjectDetails({
             {project.status}
           </span>
 
-          {/* Project Information */}
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-
             <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
               <p className="text-sm text-slate-400">
                 Role
               </p>
-
               <p className="mt-2 font-semibold text-white">
                 {project.role}
               </p>
@@ -149,7 +219,6 @@ export default async function ProjectDetails({
               <p className="text-sm text-slate-400">
                 Duration
               </p>
-
               <p className="mt-2 font-semibold text-white">
                 {project.duration}
               </p>
@@ -159,27 +228,21 @@ export default async function ProjectDetails({
               <p className="text-sm text-slate-400">
                 Client
               </p>
-
               <p className="mt-2 font-semibold text-white">
                 {project.client}
               </p>
             </div>
-
           </div>
 
-          {/* Project Description */}
-          <p className="mt-8 text-lg leading-8 text-slate-300">
+          <p className="mt-8 text-lg text-slate-300">
             {project.description}
           </p>
 
-          {/* Challenge / Solution / Result */}
           <div className="mt-12 space-y-8">
-
             <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
               <h2 className="text-2xl font-bold text-white">
                 Challenge
               </h2>
-
               <p className="mt-3 leading-7 text-slate-300">
                 {project.challenge}
               </p>
@@ -189,7 +252,6 @@ export default async function ProjectDetails({
               <h2 className="text-2xl font-bold text-white">
                 Solution
               </h2>
-
               <p className="mt-3 leading-7 text-slate-300">
                 {project.solution}
               </p>
@@ -199,15 +261,12 @@ export default async function ProjectDetails({
               <h2 className="text-2xl font-bold text-white">
                 Result
               </h2>
-
               <p className="mt-3 leading-7 text-slate-300">
                 {project.result}
               </p>
             </div>
-
           </div>
 
-          {/* Technologies */}
           <div className="mt-8 flex flex-wrap gap-3">
             {project.technologies.map((tech) => (
               <span
@@ -222,14 +281,13 @@ export default async function ProjectDetails({
           {/* Related Projects */}
           {relatedProjects.length > 0 && (
             <section className="mt-16 border-t border-slate-800 pt-12">
-
               <h2 className="text-3xl font-bold text-white">
                 Related Projects
               </h2>
 
               <p className="mt-3 text-slate-400">
-                Explore more enterprise networking and infrastructure
-                projects from Agam Technology.
+                Explore more enterprise networking and
+                infrastructure projects from Agam Technology.
               </p>
 
               <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -266,13 +324,10 @@ export default async function ProjectDetails({
                   </Link>
                 ))}
               </div>
-
             </section>
           )}
 
-          {/* External Links */}
           <div className="mt-10 flex flex-wrap gap-4">
-
             <a
               href={project.github}
               target="_blank"
@@ -290,10 +345,8 @@ export default async function ProjectDetails({
             >
               Live Demo
             </a>
-
           </div>
-
-        </div>
+          </div>
       </main>
     </>
   );

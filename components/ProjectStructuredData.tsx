@@ -7,20 +7,35 @@ interface ProjectStructuredDataProps {
 export default function ProjectStructuredData({
   project,
 }: ProjectStructuredDataProps) {
-  const projectUrl = `https://www.agamtechnology.com/projects/${project.id}`;
+  const projectUrl =
+    `https://www.agamtechnology.com/projects/${project.id}`;
+
+  const projectImage =
+    `https://www.agamtechnology.com${project.image}`;
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+
     headline: project.title,
+
     description: project.description,
-    image: `https://www.agamtechnology.com${project.image}`,
+
+    image: [projectImage],
+
     url: projectUrl,
+
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": projectUrl,
+    },
+
     author: {
       "@type": "Organization",
       name: "Agam Technology",
       url: "https://www.agamtechnology.com",
     },
+
     publisher: {
       "@type": "Organization",
       name: "Agam Technology",
@@ -30,12 +45,27 @@ export default function ProjectStructuredData({
         url: "https://www.agamtechnology.com/icon.png",
       },
     },
-    keywords: project.technologies.join(", "),
+
+    articleSection: "Projects",
+
+    keywords: [
+      ...project.technologies,
+      "Agam Technology",
+      "enterprise networking",
+      "network automation",
+      "IT infrastructure",
+    ],
+
+    about: project.technologies.map((technology) => ({
+      "@type": "Thing",
+      name: technology,
+    })),
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+
     itemListElement: [
       {
         "@type": "ListItem",
@@ -43,12 +73,14 @@ export default function ProjectStructuredData({
         name: "Home",
         item: "https://www.agamtechnology.com/",
       },
+
       {
         "@type": "ListItem",
         position: 2,
         name: "Projects",
         item: "https://www.agamtechnology.com/#projects",
       },
+
       {
         "@type": "ListItem",
         position: 3,
