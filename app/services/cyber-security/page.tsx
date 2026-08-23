@@ -12,29 +12,34 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cyber Security Services | Shield, VPN & Zero Trust",
+  title: "Cyber Security Services & Consulting | Agam Technology",
   description:
-    "Agam Technology provides enterprise cyber security solutions including Shield, VPN, network security, segmentation and Zero Trust security practices.",
+    "Agam Technology provides cyber security services and consulting for enterprise network security, firewalls, VPN, network segmentation, secure access and Zero Trust security.",
   keywords: [
     "cyber security services",
+    "cyber security consulting",
     "cyber security solutions",
-    "network security services",
-    "firewall services",
-    "VPN solutions",
-    "Zero Trust security",
+    "enterprise cyber security",
     "enterprise network security",
+    "network security services",
+    "firewall security services",
+    "firewall services",
+    "VPN security services",
+    "VPN solutions",
     "network segmentation",
+    "Zero Trust security",
+    "secure network access",
     "Cisco security",
     "FortiGate firewall",
+    "cyber security consultant India",
   ],
   alternates: {
-    canonical:
-      "https://www.agamtechnology.com/services/cyber-security",
+    canonical: "https://www.agamtechnology.com/services/cyber-security",
   },
   openGraph: {
-    title: "Cyber Security Services | Agam Technology",
+    title: "Cyber Security Services & Consulting | Agam Technology",
     description:
-      "Enterprise cyber security solutions including Shield, VPN, network security, segmentation and Zero Trust security practices.",
+      "Enterprise cyber security services covering firewalls, VPN, network security, segmentation, secure access and Zero Trust security.",
     url: "https://www.agamtechnology.com/services/cyber-security",
     siteName: "Agam Technology",
     type: "website",
