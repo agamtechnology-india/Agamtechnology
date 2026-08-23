@@ -11,26 +11,30 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Network Automation Services",
+  title: "Network Automation Services & Consulting | Agam Technology",
   description:
-    "Agam Technology provides network automation services using Python, Netmiko, Ansible and REST APIs to automate enterprise network operations.",
+    "Agam Technology provides network automation services and consulting using Python, Netmiko, Ansible, REST APIs and Cisco automation for enterprise networks.",
   keywords: [
     "network automation services",
+    "network automation consulting",
     "network automation consultant",
+    "enterprise network automation",
     "Python network automation",
     "Netmiko automation",
     "Ansible network automation",
     "Cisco network automation",
     "REST API network automation",
+    "network automation services India",
+    "network automation consultant India",
   ],
   alternates: {
     canonical:
       "https://www.agamtechnology.com/services/network-automation",
   },
   openGraph: {
-    title: "Network Automation Services | Agam Technology",
+    title: "Network Automation Services & Consulting | Agam Technology",
     description:
-      "Automate enterprise network operations with Python, Netmiko, Ansible and REST APIs.",
+      "Enterprise network automation using Python, Netmiko, Ansible, REST APIs and Cisco automation technologies.",
     url: "https://www.agamtechnology.com/services/network-automation",
     siteName: "Agam Technology",
     type: "website",
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
         url: "https://www.agamtechnology.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agam Technology Network Automation Services",
+        alt: "Agam Technology Network Automation Services and Consulting",
       },
     ],
   },
@@ -180,7 +184,7 @@ export default function NetworkAutomationPage() {
 
             <div className="mt-10 max-w-4xl">
               <span className="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-                Network Automation
+                Enterprise Network Automation
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
@@ -188,9 +192,10 @@ export default function NetworkAutomationPage() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-slate-300 md:text-xl">
-                Automate repetitive network operations, improve
-                configuration consistency, and modernize enterprise
-                infrastructure with Python, Netmiko, Ansible and REST APIs.
+                Agam Technology provides enterprise network automation services and
+                consulting to reduce repetitive operations, improve configuration
+                consistency, and modernize network infrastructure using Python,
+                Netmiko, Ansible, REST APIs and Cisco automation.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
