@@ -14,25 +14,29 @@ import {
 export const metadata: Metadata = {
   title: "IT Consulting Services | Network, Cloud & Infrastructure",
   description:
-    "Agam Technology provides IT consulting services covering enterprise networking, network automation, cloud, data center, cybersecurity and infrastructure modernization.",
+    "Agam Technology provides IT consulting services for enterprise networking, network automation, cloud, data center, cybersecurity and infrastructure modernization.",
   keywords: [
     "IT consulting services",
+    "IT consulting",
     "IT infrastructure consulting",
-    "network consulting",
+    "IT consultant India",
     "enterprise IT consulting",
-    "cloud consulting",
-    "data center consulting",
+    "enterprise network consulting",
+    "network consulting services",
     "network automation consulting",
+    "cloud consulting",
+    "cloud infrastructure consulting",
+    "data center consulting",
     "cyber security consulting",
-    "IT infrastructure modernization",
+    "infrastructure modernization",
   ],
   alternates: {
     canonical: "https://www.agamtechnology.com/services/it-consulting",
   },
   openGraph: {
-    title: "IT Consulting Services | Agam Technology",
+    title: "IT Consulting Services | Network, Cloud & Infrastructure",
     description:
-      "Technology consulting for enterprise networking, cloud, automation, data center and cybersecurity infrastructure.",
+      "IT consulting for enterprise networking, automation, cloud, data center, cybersecurity and infrastructure modernization.",
     url: "https://www.agamtechnology.com/services/it-consulting",
     siteName: "Agam Technology",
     type: "website",
@@ -260,9 +264,7 @@ export default function ITConsultingPage() {
                   >
                     <div className="flex items-center gap-3">
                       <CheckCircle2 className="h-5 w-5 text-blue-400" />
-                      <span className="font-medium text-slate-200">
-                        {item}
-                      </span>
+                      <span className="font-medium text-slate-200">{item}</span>
                     </div>
                   </div>
                 ))}
@@ -353,9 +355,7 @@ export default function ITConsultingPage() {
                     className="flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-950/60 p-4"
                   >
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-400" />
-                    <span className="leading-7 text-slate-300">
-                      {benefit}
-                    </span>
+                    <span className="leading-7 text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -445,9 +445,7 @@ export default function ITConsultingPage() {
                 href="/services/network-automation"
                 className="rounded-xl border border-slate-800 bg-slate-950 p-5 transition hover:border-blue-500/50"
               >
-                <h3 className="font-semibold text-white">
-                  Network Automation
-                </h3>
+                <h3 className="font-semibold text-white">Network Automation</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-400">
                   Python, Netmiko, Ansible and REST API automation.
                 </p>
@@ -469,9 +467,7 @@ export default function ITConsultingPage() {
                 href="/services/cloud-solutions"
                 className="rounded-xl border border-slate-800 bg-slate-950 p-5 transition hover:border-blue-500/50"
               >
-                <h3 className="font-semibold text-white">
-                  Cloud Solutions
-                </h3>
+                <h3 className="font-semibold text-white">Cloud Solutions</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-400">
                   Cloud connectivity and hybrid infrastructure solutions.
                 </p>
@@ -481,9 +477,7 @@ export default function ITConsultingPage() {
                 href="/services/cyber-security"
                 className="rounded-xl border border-slate-800 bg-slate-950 p-5 transition hover:border-blue-500/50"
               >
-                <h3 className="font-semibold text-white">
-                  Cyber Security
-                </h3>
+                <h3 className="font-semibold text-white">Cyber Security</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-400">
                   Security architecture, firewall, VPN and Zero Trust.
                 </p>
@@ -500,8 +494,8 @@ export default function ITConsultingPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-              Talk to Agam Technology about your networking, automation,
-              cloud, data center or cybersecurity requirements.
+              Talk to Agam Technology about your networking, automation, cloud,
+              data center or cybersecurity requirements.
             </p>
 
             <Link
