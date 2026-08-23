@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Data Center Services & Consulting | Cisco ACI & Nexus",
   description:
-    "Agam Technology provides data center services and consulting for Cisco ACI, Nexus, data center networking, virtualization, infrastructure design and modernization.",
+    "Agam Technology provides enterprise data center solutions and consulting for Cisco ACI, Cisco Nexus, data center networking, virtualization and infrastructure modernization.",
   keywords: [
     "data center services",
     "data center solutions",
@@ -31,11 +31,10 @@ export const metadata: Metadata = {
     "data center consultant India",
   ],
   alternates: {
-    canonical:
-      "https://www.agamtechnology.com/services/data-center",
+    canonical: "https://www.agamtechnology.com/services/data-center",
   },
   openGraph: {
-    title: "Data Center Services & Consulting | Cisco ACI & Nexus",
+    title: "Data Center Solutions & Consulting | Cisco ACI & Nexus",
     description:
       "Data center networking, Cisco ACI, Nexus, virtualization, infrastructure design and modernization services.",
     url: "https://www.agamtechnology.com/services/data-center",
@@ -192,27 +191,28 @@ export default function DataCenterPage() {
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-                Modern{" "}
+                Data Center{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Data Center
-                </span>{" "}
-                Infrastructure
+                  Solutions & Consulting
+                </span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Design and implement scalable, secure and reliable data center
-                infrastructure using Cisco ACI, Nexus, virtualization and
-                modern enterprise networking technologies.
+                Agam Technology provides enterprise data center solutions and
+                consulting for Cisco ACI, Cisco Nexus, data center networking,
+                virtualization and infrastructure modernization. We help
+                businesses design scalable, secure and reliable data center
+                environments.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-  href="/#contact"
-  className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
->
-  Discuss Your Data Center
-  <ArrowRight className="h-4 w-4" />
-</Link>
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
+                >
+                  Discuss Your Data Center
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
 
                 <Link
                   href="/services/network-automation"
@@ -238,8 +238,8 @@ export default function DataCenterPage() {
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-400">
-                Enterprise-focused data center solutions designed for
-                performance, scalability and operational efficiency.
+                Enterprise data center solutions designed for performance,
+                scalability, security and operational efficiency.
               </p>
             </div>
 
@@ -283,9 +283,8 @@ export default function DataCenterPage() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-400">
-                A modern data center architecture can help organizations
-                improve reliability, scalability, visibility and operational
-                efficiency.
+                A modern data center architecture can help organizations improve
+                reliability, scalability, visibility and operational efficiency.
               </p>
             </div>
 
@@ -335,17 +334,17 @@ export default function DataCenterPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-              Talk to Agam Technology about your data center networking,
-              Cisco ACI, Nexus and infrastructure requirements.
+              Talk to Agam Technology about your data center networking, Cisco
+              ACI, Nexus and infrastructure requirements.
             </p>
 
             <Link
-  href="/#contact"
-  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition hover:bg-blue-500"
->
-  Contact Agam Technology
-  <ArrowRight className="h-4 w-4" />
-</Link>
+              href="/#contact"
+              className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition hover:bg-blue-500"
+            >
+              Contact Agam Technology
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </section>
       </main>
