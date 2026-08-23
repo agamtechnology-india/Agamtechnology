@@ -30,15 +30,15 @@ export default function Services() {
           </span>
 
           <h2 className="mt-5 text-4xl font-bold text-white md:text-5xl">
-            Our{" "}
+            Enterprise IT Infrastructure{" "}
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Services
             </span>
           </h2>
-
           <p className="mt-5 text-lg leading-8 text-slate-400">
-            Enterprise technology solutions designed to automate,
-            secure, and modernize your IT infrastructure.
+            Enterprise networking, network automation, cloud, data center,
+            cybersecurity and IT consulting services designed to automate,
+            secure and modernize your infrastructure.
           </p>
         </div>
 

@@ -13,10 +13,8 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-
         {/* Hero Content */}
         <div className="text-center lg:text-left">
-
           <span className="inline-flex rounded-full border border-blue-500/40 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
             Network Automation & IT Infrastructure Solutions
           </span>
@@ -32,10 +30,10 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl lg:mx-0">
-            Agam Technology helps businesses design, automate, secure, and
-            modernize enterprise IT infrastructure with network automation,
-            Cisco ACI, SD-WAN, cloud networking, data center, and network
-            security solutions.
+            Agam Technology provides enterprise network automation and IT
+            infrastructure consulting to help businesses design, automate,
+            secure, and modernize their networks with Cisco ACI, SD-WAN, cloud
+            networking, data center, and cybersecurity solutions.
           </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-400 lg:mx-0">
@@ -45,7 +43,6 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-
             <Link
               href="#services"
               className="rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20"
@@ -59,7 +56,6 @@ export default function Hero() {
             >
               Contact Us →
             </Link>
-
           </div>
         </div>
 
@@ -74,9 +70,7 @@ export default function Hero() {
 
           <div className="relative flex h-32 w-32 items-center justify-center rounded-full border border-blue-400/40 bg-slate-900 shadow-2xl shadow-blue-500/20">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">
-                AT
-              </div>
+              <div className="text-3xl font-bold text-blue-400">AT</div>
 
               <div className="mt-1 text-xs tracking-widest text-slate-400">
                 NETWORK
@@ -89,7 +83,6 @@ export default function Hero() {
           <div className="absolute bottom-24 left-32 h-3 w-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/60" />
           <div className="absolute bottom-20 right-28 h-3 w-3 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/60" />
         </div>
-
       </div>
     </section>
   );
