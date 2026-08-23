@@ -11,17 +11,21 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Enterprise Networking Services",
+  title: "Enterprise Network Services & Consulting | Agam Technology",
   description:
-    "Agam Technology provides enterprise networking services including network design, deployment, routing, switching, security and infrastructure consulting.",
+    "Agam Technology provides enterprise network services and consulting for network design, Cisco routing and switching, security, infrastructure deployment and network modernization.",
   keywords: [
+    "enterprise network services",
     "enterprise networking services",
     "enterprise network consulting",
-    "network infrastructure services",
-    "network design services",
-    "Cisco network consulting",
+    "enterprise network design",
     "enterprise network deployment",
+    "network infrastructure services",
     "network infrastructure consulting",
+    "Cisco network consulting",
+    "Cisco enterprise networking",
+    "routing and switching services",
+    "network modernization",
     "network consultant India",
   ],
   alternates: {
@@ -29,9 +33,9 @@ export const metadata: Metadata = {
       "https://www.agamtechnology.com/services/enterprise-networking",
   },
   openGraph: {
-    title: "Enterprise Networking Services | Agam Technology",
+    title: "Enterprise Network Services & Consulting | Agam Technology",
     description:
-      "Enterprise network design, deployment, routing, switching, security and infrastructure consulting.",
+      "Enterprise network design, Cisco routing and switching, security, infrastructure deployment and network modernization.",
     url: "https://www.agamtechnology.com/services/enterprise-networking",
     siteName: "Agam Technology",
     type: "website",
