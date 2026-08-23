@@ -11,27 +11,34 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cloud Solutions",
+  title: "Cloud Services & Consulting | AWS & Hybrid Cloud | Agam Technology",
   description:
-    "Agam Technology provides cloud connectivity, hybrid cloud, cloud networking and infrastructure solutions for modern businesses.",
+    "Agam Technology provides cloud services and consulting for AWS networking, cloud infrastructure, hybrid cloud, cloud connectivity, migration and cloud security.",
   keywords: [
+    "cloud services",
     "cloud solutions",
+    "cloud consulting",
+    "cloud infrastructure services",
     "cloud networking",
     "hybrid cloud solutions",
-    "cloud infrastructure",
+    "hybrid cloud consulting",
     "cloud connectivity",
     "enterprise cloud solutions",
     "AWS networking",
-    "cloud migration",
+    "AWS cloud consulting",
+    "cloud migration services",
+    "cloud security services",
+    "cloud infrastructure consulting",
+    "cloud consultant India",
   ],
   alternates: {
     canonical:
       "https://www.agamtechnology.com/services/cloud-solutions",
   },
   openGraph: {
-    title: "Cloud Solutions | Agam Technology",
+    title: "Cloud Services & Consulting | AWS & Hybrid Cloud | Agam Technology",
     description:
-      "Cloud connectivity, hybrid cloud and enterprise cloud infrastructure solutions.",
+      "AWS networking, cloud infrastructure, hybrid cloud, connectivity, migration and cloud security services.",
     url: "https://www.agamtechnology.com/services/cloud-solutions",
     siteName: "Agam Technology",
     type: "website",
@@ -40,7 +47,7 @@ export const metadata: Metadata = {
         url: "https://www.agamtechnology.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agam Technology Cloud Solutions",
+        alt: "Agam Technology Cloud Services and Consulting",
       },
     ],
   },
