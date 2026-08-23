@@ -357,6 +357,21 @@ export default function NetworkAutomationPage() {
               View Network Automation Project
               <ArrowRight size={18} />
             </Link>
+            <Link
+              href="/projects/2"
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-400 transition hover:text-blue-300"
+            >
+              View Cisco ACI Project
+              <ArrowRight size={18} />
+            </Link>
+
+            <Link
+              href="/projects/3"
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-400 transition hover:text-blue-300"
+            >
+              View SD-WAN Project
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </section>
 
