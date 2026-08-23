@@ -11,28 +11,33 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Data Center Solutions | Cisco ACI & Nexus",
+  title: "Data Center Services & Consulting | Cisco ACI & Nexus",
   description:
-    "Agam Technology provides data center solutions using Cisco ACI, Nexus, virtualization and modern infrastructure technologies for scalable enterprise environments.",
+    "Agam Technology provides data center services and consulting for Cisco ACI, Nexus, data center networking, virtualization, infrastructure design and modernization.",
   keywords: [
-    "data center solutions",
     "data center services",
-    "Cisco ACI services",
-    "Cisco Nexus services",
-    "data center infrastructure",
+    "data center solutions",
     "data center consulting",
+    "data center network design",
+    "data center infrastructure services",
+    "Cisco ACI services",
     "Cisco ACI consulting",
-    "Nexus data center",
+    "Cisco ACI data center",
+    "Cisco Nexus services",
+    "Cisco Nexus data center",
+    "data center networking",
+    "data center modernization",
     "enterprise data center",
+    "data center consultant India",
   ],
   alternates: {
     canonical:
       "https://www.agamtechnology.com/services/data-center",
   },
   openGraph: {
-    title: "Data Center Solutions | Agam Technology",
+    title: "Data Center Services & Consulting | Cisco ACI & Nexus",
     description:
-      "Modern data center infrastructure solutions using Cisco ACI, Nexus, virtualization and enterprise networking technologies.",
+      "Data center networking, Cisco ACI, Nexus, virtualization, infrastructure design and modernization services.",
     url: "https://www.agamtechnology.com/services/data-center",
     siteName: "Agam Technology",
     type: "website",
