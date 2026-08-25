@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cloud Services & Consulting | AWS & Hybrid Cloud | Agam Technology",
+  title: "Cloud Solutions & Consulting | AWS & Hybrid Cloud | Agam Technology",
   description:
-    "Agam Technology provides cloud services and consulting for AWS networking, cloud infrastructure, hybrid cloud, cloud connectivity, migration and cloud security.",
+    "Agam Technology provides enterprise cloud solutions and consulting for AWS networking, cloud infrastructure, hybrid cloud, cloud connectivity, migration and cloud security.",
   keywords: [
     "cloud services",
     "cloud solutions",
@@ -30,15 +30,18 @@ export const metadata: Metadata = {
     "cloud security services",
     "cloud infrastructure consulting",
     "cloud consultant India",
+    "AWS cloud solutions",
+    "enterprise cloud consulting",
+    "hybrid cloud services India",
   ],
   alternates: {
-    canonical:
-      "https://www.agamtechnology.com/services/cloud-solutions",
+    canonical: "https://www.agamtechnology.com/services/cloud-solutions",
   },
   openGraph: {
-    title: "Cloud Services & Consulting | AWS & Hybrid Cloud | Agam Technology",
+    title:
+      "Cloud Solutions & Consulting | AWS & Hybrid Cloud | Agam Technology",
     description:
-      "AWS networking, cloud infrastructure, hybrid cloud, connectivity, migration and cloud security services.",
+      "Enterprise cloud solutions using AWS networking, hybrid cloud, cloud connectivity, migration and cloud security.",
     url: "https://www.agamtechnology.com/services/cloud-solutions",
     siteName: "Agam Technology",
     type: "website",
@@ -117,9 +120,9 @@ const technologies = [
 const cloudSolutionsSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Cloud Solutions",
+  name: "Cloud Solutions & Consulting",
   description:
-    "Cloud connectivity, hybrid cloud and enterprise cloud infrastructure solutions from Agam Technology.",
+    "Enterprise cloud solutions and consulting for AWS networking, hybrid cloud, cloud connectivity, migration and cloud security.",
   url: "https://www.agamtechnology.com/services/cloud-solutions",
   provider: {
     "@type": "Organization",
@@ -131,7 +134,7 @@ const cloudSolutionsSchema = {
     "@type": "Country",
     name: "India",
   },
-  serviceType: "Cloud Solutions",
+  serviceType: "Cloud Solutions & Consulting",
 };
 
 const breadcrumbSchema = {
@@ -195,19 +198,20 @@ export default function CloudSolutionsPage() {
 
             <div className="mt-10 max-w-4xl">
               <span className="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-                Cloud Infrastructure
+                Enterprise Cloud Solutions
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
                 Cloud{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Solutions
+                  Solutions & Consulting
                 </span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Build secure, scalable and connected cloud infrastructure
-                with enterprise networking and hybrid cloud expertise.
+                Agam Technology provides enterprise cloud solutions and
+                consulting for AWS networking, hybrid cloud, cloud connectivity
+                and secure cloud infrastructure modernization.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -239,15 +243,15 @@ export default function CloudSolutionsPage() {
               </span>
 
               <h2 className="mt-5 text-3xl font-bold md:text-5xl">
-                Cloud Infrastructure{" "}
+                Cloud Solutions{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Expertise
+                  & Consulting
                 </span>
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-400">
-                Practical cloud and networking solutions designed for
-                reliable enterprise infrastructure.
+                Enterprise cloud and networking solutions designed for secure,
+                scalable and reliable infrastructure.
               </p>
             </div>
 
@@ -264,9 +268,7 @@ export default function CloudSolutionsPage() {
                       <Icon className="h-6 w-6" />
                     </div>
 
-                    <h3 className="text-xl font-bold">
-                      {capability.title}
-                    </h3>
+                    <h3 className="text-xl font-bold">{capability.title}</h3>
 
                     <p className="mt-4 leading-7 text-slate-400">
                       {capability.description}
@@ -349,8 +351,8 @@ export default function CloudSolutionsPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-              Talk to Agam Technology about your cloud networking,
-              connectivity or hybrid infrastructure requirements.
+              Talk to Agam Technology about your cloud networking, connectivity
+              or hybrid infrastructure requirements.
             </p>
 
             <Link
