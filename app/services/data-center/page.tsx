@@ -199,10 +199,10 @@ export default function DataCenterPage() {
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
                 Agam Technology provides enterprise data center solutions and
-                consulting for Cisco ACI, Cisco Nexus, data center networking,
-                virtualization and infrastructure modernization. We help
-                businesses design scalable, secure and reliable data center
-                environments.
+                consulting for Cisco data center infrastructure, Cisco ACI,
+                Cisco Nexus, data center networking, virtualization and
+                infrastructure modernization. We help businesses design
+                scalable, secure and reliable data center environments.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -234,12 +234,13 @@ export default function DataCenterPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-                Data Center Expertise
+                Cisco Data Center Solutions
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-400">
                 Enterprise data center solutions designed for performance,
-                scalability, security and operational efficiency.
+                scalability, security and operational efficiency, with expertise
+                across Cisco ACI, Cisco Nexus and modern data center networking.
               </p>
             </div>
 
