@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Cyber Security Services & Consulting | Agam Technology",
   description:
-    "Agam Technology provides cyber security services and consulting for enterprise network security, firewalls, VPN, network segmentation, secure access and Zero Trust security.",
+    "Agam Technology provides enterprise cyber security services and consulting covering firewall security, VPN, network segmentation, secure access and Zero Trust security for modern business infrastructure.",
   keywords: [
     "cyber security services",
     "cyber security consulting",
@@ -118,9 +118,9 @@ const technologies = [
 const cyberSecuritySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Cyber Security Services",
+  name: "Cyber Security Services & Consulting",
   description:
-    "Enterprise cyber security solutions including Shield, VPN, network security, segmentation and Zero Trust security practices.",
+    "Enterprise cyber security services including firewall security, VPN, network security, segmentation and Zero Trust security practices.",
   url: "https://www.agamtechnology.com/services/cyber-security",
   provider: {
     "@type": "Organization",
@@ -132,7 +132,7 @@ const cyberSecuritySchema = {
     "@type": "Country",
     name: "India",
   },
-  serviceType: "Cyber Security Services",
+  serviceType: "Cyber Security Services & Consulting",
 };
 
 const breadcrumbSchema = {
@@ -196,20 +196,21 @@ export default function CyberSecurityPage() {
 
             <div className="mt-8 max-w-4xl">
               <span className="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-                Cyber Security Solutions
+                Cyber Security Services
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-                Secure Your{" "}
+                Cyber Security{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Enterprise Infrastructure
+                  Services & Consulting
                 </span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Protect enterprise networks and infrastructure with Shield,
-                VPN, segmentation, secure access and Zero Trust security
-                solutions designed for modern business environments.
+                Agam Technology provides enterprise cyber security services and
+                consulting covering firewall security, VPN, network
+                segmentation, secure access and Zero Trust security for modern
+                business infrastructure.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -241,7 +242,7 @@ export default function CyberSecurityPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-                Enterprise Security Expertise
+                Enterprise Cyber Security Services
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-400">
