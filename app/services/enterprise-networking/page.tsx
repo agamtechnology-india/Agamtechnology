@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
+  ArrowLeft,
   ArrowRight,
   CheckCircle2,
   Cloud,
@@ -29,8 +30,7 @@ export const metadata: Metadata = {
     "network consultant India",
   ],
   alternates: {
-    canonical:
-      "https://www.agamtechnology.com/services/enterprise-networking",
+    canonical: "https://www.agamtechnology.com/services/enterprise-networking",
   },
   openGraph: {
     title: "Enterprise Network Services & Consulting | Agam Technology",
@@ -184,7 +184,8 @@ export default function EnterpriseNetworkingPage() {
               href="/#services"
               className="inline-flex items-center gap-2 text-blue-400 transition hover:text-blue-300"
             >
-              ← Back to Services
+              <ArrowLeft size={18} />
+              Back to Services
             </Link>
 
             <div className="mt-10 max-w-4xl">
@@ -198,8 +199,8 @@ export default function EnterpriseNetworkingPage() {
 
               <p className="mt-6 text-lg leading-8 text-slate-300 md:text-xl">
                 Design, deploy and modernize reliable enterprise network
-                infrastructure with scalable routing, switching, security,
-                cloud connectivity and network architecture solutions.
+                infrastructure with scalable routing, switching, security, cloud
+                connectivity and network architecture solutions.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -244,15 +245,13 @@ export default function EnterpriseNetworkingPage() {
 
                 <p className="mt-5 leading-8 text-slate-300">
                   Agam Technology helps organizations design, deploy and
-                  modernize network infrastructure across campus, branch,
-                  data center and hybrid environments.
+                  modernize network infrastructure across campus, branch, data
+                  center and hybrid environments.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-slate-700 bg-slate-950 p-8">
-                <h3 className="text-2xl font-bold">
-                  Business Benefits
-                </h3>
+                <h3 className="text-2xl font-bold">Business Benefits</h3>
 
                 <ul className="mt-6 space-y-4">
                   {benefits.map((benefit) => (
@@ -286,8 +285,8 @@ export default function EnterpriseNetworkingPage() {
               </h2>
 
               <p className="mt-5 leading-8 text-slate-400">
-                Network solutions designed to improve reliability,
-                scalability, security and operational efficiency.
+                Network solutions designed to improve reliability, scalability,
+                security and operational efficiency.
               </p>
             </div>
 
