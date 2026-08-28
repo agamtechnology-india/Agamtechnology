@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Network Automation Services & Consulting | Agam Technology",
   description:
-    "Agam Technology provides network automation services and consulting using Python, Netmiko, Ansible, REST APIs and Cisco automation for enterprise networks.",
+    "Agam Technology provides enterprise network automation services using Python, Netmiko, Ansible, REST APIs and Cisco automation to streamline network configuration, operations and infrastructure management.",
   keywords: [
     "network automation services",
     "network automation consulting",
@@ -28,8 +28,7 @@ export const metadata: Metadata = {
     "network automation consultant India",
   ],
   alternates: {
-    canonical:
-      "https://www.agamtechnology.com/services/network-automation",
+    canonical: "https://www.agamtechnology.com/services/network-automation",
   },
   openGraph: {
     title: "Network Automation Services & Consulting | Agam Technology",
@@ -107,7 +106,7 @@ const technologies = [
 const networkAutomationSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Network Automation Services",
+  name: "Network Automation Services & Consulting",
   description:
     "Network automation services using Python, Netmiko, Ansible and REST APIs for enterprise network operations.",
   url: "https://www.agamtechnology.com/services/network-automation",
@@ -121,7 +120,7 @@ const networkAutomationSchema = {
     "@type": "Country",
     name: "India",
   },
-  serviceType: "Network Automation Services",
+  serviceType: "Network Automation Services & Consulting",
 };
 
 const breadcrumbSchema = {
@@ -192,10 +191,10 @@ export default function NetworkAutomationPage() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-slate-300 md:text-xl">
-                Agam Technology provides enterprise network automation services and
-                consulting to reduce repetitive operations, improve configuration
-                consistency, and modernize network infrastructure using Python,
-                Netmiko, Ansible, REST APIs and Cisco automation.
+                Agam Technology provides enterprise network automation services
+                and consulting to reduce repetitive operations, improve
+                configuration consistency, and modernize network infrastructure
+                using Python, Netmiko, Ansible, REST APIs and Cisco automation.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -235,21 +234,19 @@ export default function NetworkAutomationPage() {
                 <p className="mt-6 leading-8 text-slate-300">
                   Manual network configuration can become time-consuming,
                   inconsistent and difficult to scale. Agam Technology helps
-                  organizations automate repeatable network operations and
-                  build reliable infrastructure workflows.
+                  organizations automate repeatable network operations and build
+                  reliable infrastructure workflows.
                 </p>
 
                 <p className="mt-5 leading-8 text-slate-300">
-                  Our approach combines Python automation, Netmiko, Ansible
-                  and REST APIs to support enterprise networking environments
-                  and improve operational efficiency.
+                  Our approach combines Python automation, Netmiko, Ansible and
+                  REST APIs to support enterprise networking environments and
+                  improve operational efficiency.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-slate-700 bg-slate-950 p-8">
-                <h3 className="text-2xl font-bold">
-                  Why Network Automation?
-                </h3>
+                <h3 className="text-2xl font-bold">Why Network Automation?</h3>
 
                 <ul className="mt-6 space-y-4">
                   {benefits.map((benefit) => (
@@ -283,8 +280,8 @@ export default function NetworkAutomationPage() {
               </h2>
 
               <p className="mt-5 leading-8 text-slate-400">
-                Practical automation solutions designed for enterprise
-                network operations and infrastructure teams.
+                Practical automation solutions designed for enterprise network
+                operations and infrastructure teams.
               </p>
             </div>
 
