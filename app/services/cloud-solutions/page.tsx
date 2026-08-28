@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cloud Solutions & Consulting | AWS & Hybrid Cloud | Agam Technology",
+  title: "Cloud Solutions & Consulting | AWS & Hybrid Cloud",
   description:
     "Agam Technology provides enterprise cloud solutions and consulting for AWS networking, cloud infrastructure, hybrid cloud, cloud connectivity, migration and cloud security.",
   keywords: [

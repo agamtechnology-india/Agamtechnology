@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Network Automation Services & Consulting | Agam Technology",
+  title: "Network Automation Services & Consulting",
   description:
     "Agam Technology provides enterprise network automation services using Python, Netmiko, Ansible, REST APIs and Cisco automation to streamline network configuration, operations and infrastructure management.",
   keywords: [

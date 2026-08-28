@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cyber Security Services & Consulting | Agam Technology",
+  title: "Cyber Security Services & Consulting",
   description:
     "Agam Technology provides enterprise cyber security services and consulting covering firewall security, VPN, network segmentation, secure access and Zero Trust security for modern business infrastructure.",
   keywords: [

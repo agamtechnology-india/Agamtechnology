@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IT Infrastructure Consulting Services | Agam Technology",
+  title: "IT Infrastructure Consulting Services",
   description:
     "Agam Technology provides IT infrastructure consulting for enterprise networking, automation, cloud, data center, cybersecurity and infrastructure modernization.",
   keywords: [
