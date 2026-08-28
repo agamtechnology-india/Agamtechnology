@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IT Consulting Services | Network, Cloud & Infrastructure",
+  title: "IT Infrastructure Consulting Services | Agam Technology",
   description:
-    "Agam Technology provides IT consulting services for enterprise networking, network automation, cloud, data center, cybersecurity and infrastructure modernization.",
+    "Agam Technology provides IT infrastructure consulting for enterprise networking, automation, cloud, data center, cybersecurity and infrastructure modernization.",
   keywords: [
     "IT consulting services",
     "IT consulting",
@@ -29,14 +29,19 @@ export const metadata: Metadata = {
     "data center consulting",
     "cyber security consulting",
     "infrastructure modernization",
+    "IT infrastructure consulting services",
+    "IT infrastructure consultant",
+    "enterprise infrastructure consulting",
+    "technology infrastructure consulting",
+    "IT infrastructure consulting India",
   ],
   alternates: {
     canonical: "https://www.agamtechnology.com/services/it-consulting",
   },
   openGraph: {
-    title: "IT Consulting Services | Network, Cloud & Infrastructure",
+    title: "IT Infrastructure Consulting Services | Agam Technology",
     description:
-      "IT consulting for enterprise networking, automation, cloud, data center, cybersecurity and infrastructure modernization.",
+      "IT infrastructure consulting for enterprise networking, automation, cloud, data center, cybersecurity and infrastructure modernization.",
     url: "https://www.agamtechnology.com/services/it-consulting",
     siteName: "Agam Technology",
     type: "website",
@@ -117,9 +122,9 @@ const expertise = [
 const consultingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "IT Consulting Services",
+  name: "IT Infrastructure Consulting Services",
   description:
-    "IT consulting services covering enterprise networking, network automation, cloud, data center, cybersecurity and infrastructure modernization.",
+    "IT infrastructure consulting covering enterprise networking, network automation, cloud, data center, cybersecurity and infrastructure modernization.",
   url: "https://www.agamtechnology.com/services/it-consulting",
   provider: {
     "@type": "Organization",
@@ -131,7 +136,7 @@ const consultingSchema = {
     "@type": "Country",
     name: "India",
   },
-  serviceType: "IT Consulting Services",
+  serviceType: "IT Infrastructure Consulting Services",
 };
 
 const breadcrumbSchema = {
@@ -195,19 +200,20 @@ export default function ITConsultingPage() {
 
             <div className="mt-8 max-w-4xl">
               <span className="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-                IT Consulting
+                IT Infrastructure Consulting
               </span>
 
               <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl">
-                IT Consulting for{" "}
+                IT Infrastructure Consulting for{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Modern Infrastructure
+                  Modern Enterprise IT
                 </span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Strategic technology consulting to help businesses design,
-                modernize, automate and secure enterprise IT infrastructure.
+                Agam Technology provides IT infrastructure consulting to help
+                businesses design, modernize, automate and secure enterprise IT
+                environments.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -240,7 +246,7 @@ export default function ITConsultingPage() {
                 </span>
 
                 <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-                  Practical IT consulting built around your infrastructure
+                  IT Infrastructure Consulting Services
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-400">
