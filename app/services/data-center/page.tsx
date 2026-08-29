@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Data Center Services & Consulting | Cisco ACI & Nexus",
+  title: "Cisco Data Center Services & Solutions | ACI & Nexus",
   description:
-    "Agam Technology provides enterprise data center solutions and consulting for Cisco ACI, Cisco Nexus, data center networking, virtualization and infrastructure modernization.",
+    "Agam Technology provides Cisco data center services and solutions including Cisco ACI, Cisco Nexus, data center networking, network design, virtualization and infrastructure modernization.",
   keywords: [
     "data center services",
     "data center solutions",
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "data center modernization",
     "enterprise data center",
     "data center consultant India",
+    "Cisco data center services",
+    "Cisco data center solutions",
+    "Cisco data center consulting",
+    "Cisco data center network design",
   ],
   alternates: {
     canonical: "https://www.agamtechnology.com/services/data-center",
@@ -58,15 +62,15 @@ export const metadata: Metadata = {
 const capabilities = [
   {
     icon: Network,
-    title: "Cisco ACI Solutions",
+    title: "Cisco ACI Data Center Solutions",
     description:
-      "Design and implementation of Cisco ACI-based data center fabrics for scalable and policy-driven infrastructure.",
+      "Design and implementation of Cisco ACI data center fabrics for scalable, secure and policy-driven enterprise infrastructure.",
   },
   {
     icon: Server,
-    title: "Cisco Nexus Infrastructure",
+    title: "Cisco Nexus Data Center Services",
     description:
-      "Enterprise data center switching solutions using Cisco Nexus platforms and modern network architecture.",
+      "Cisco Nexus data center switching, network architecture and infrastructure services designed for reliable and scalable enterprise environments.",
   },
   {
     icon: Database,
@@ -191,9 +195,9 @@ export default function DataCenterPage() {
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-                Data Center{" "}
+                Cisco Data Center{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Solutions & Consulting
+                  Services & Solutions
                 </span>
               </h1>
 
@@ -236,11 +240,13 @@ export default function DataCenterPage() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-400">
-                Agam Technology provides Cisco data center services for
-                enterprise networking, Cisco ACI, Cisco Nexus, data center
-                network design, virtualization integration and infrastructure
-                modernization. Our services help organizations build scalable,
-                secure and reliable data center environments.
+                Agam Technology delivers Cisco data center services and
+                solutions for enterprise environments, including Cisco ACI,
+                Cisco Nexus switching, data center network design, network
+                virtualization and infrastructure modernization. We help
+                organizations design scalable, secure and reliable data center
+                architectures aligned with business and application
+                requirements.
               </p>
             </div>
           </div>
