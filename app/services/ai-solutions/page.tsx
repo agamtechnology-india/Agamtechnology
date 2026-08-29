@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Infrastructure & Automation Services | Agam Technology",
+  title: "AI Infrastructure & Automation Services",
   description:
     "Agam Technology provides AI infrastructure, AI network automation, AIOps and enterprise generative AI solutions for modern networking, data center, cloud and IT environments.",
   keywords: [
@@ -245,16 +245,16 @@ export default function AISolutionsPage() {
                 </h2>
 
                 <p className="mt-6 leading-8 text-slate-300">
-                  AI is becoming an important part of modern IT operations.
-                  Agam Technology focuses on practical AI adoption that works
-                  with existing enterprise networking, data center, cloud and
+                  AI is becoming an important part of modern IT operations. Agam
+                  Technology focuses on practical AI adoption that works with
+                  existing enterprise networking, data center, cloud and
                   automation environments.
                 </p>
 
                 <p className="mt-5 leading-8 text-slate-300">
                   Our approach connects AI capabilities with proven
-                  infrastructure technologies such as Cisco networking,
-                  Python, REST APIs, Ansible and cloud platforms.
+                  infrastructure technologies such as Cisco networking, Python,
+                  REST APIs, Ansible and cloud platforms.
                 </p>
               </div>
 
