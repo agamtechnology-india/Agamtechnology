@@ -2,6 +2,7 @@ import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AISolutions from "@/components/AISolutions";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <AISolutions />
       <WhyChooseUs />
       <Technologies />
       <Contact />
