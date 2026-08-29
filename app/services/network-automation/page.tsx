@@ -12,14 +12,17 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Network Automation Services | Cisco, Python, Netmiko & Ansible | Agam Technology",
+    "Network Automation Services | SD-WAN, Cisco, Python & Ansible | Agam Technology",
   description:
-    "Agam Technology provides enterprise network automation services using Cisco, Python, Netmiko, Ansible and REST APIs to automate configuration, deployment, validation and network operations.",
+    "Agam Technology provides enterprise network automation services for Cisco and SD-WAN environments using Python, Netmiko, Ansible and REST APIs to automate configuration, deployment, validation and network operations.",
   keywords: [
     "network automation services",
     "network automation consulting",
     "network automation consultant",
     "enterprise network automation",
+    "SD-WAN automation",
+    "SD WAN automation",
+    "Cisco SD-WAN automation",
     "Python network automation",
     "Netmiko automation",
     "Ansible network automation",
@@ -32,9 +35,9 @@ export const metadata: Metadata = {
     canonical: "https://www.agamtechnology.com/services/network-automation",
   },
   openGraph: {
-    title: "Network Automation Services & Consulting | Agam Technology",
+    title: "Network Automation Services | SD-WAN & Cisco Automation",
     description:
-      "Enterprise network automation using Python, Netmiko, Ansible, REST APIs and Cisco automation technologies.",
+      "Enterprise network automation for Cisco and SD-WAN environments using Python, Netmiko, Ansible and REST APIs.",
     url: "https://www.agamtechnology.com/services/network-automation",
     siteName: "Agam Technology",
     type: "website",
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
         url: "https://www.agamtechnology.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agam Technology Network Automation Services and Consulting",
+        alt: "Agam Technology Network Automation Services and SD-WAN Automation",
       },
     ],
   },
@@ -194,14 +197,15 @@ export default function NetworkAutomationPage() {
               </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-                Network Automation Services
+                Network Automation Services & SD-WAN Automation
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-slate-300 md:text-xl">
                 Agam Technology provides enterprise network automation services
-                and consulting to reduce repetitive operations, improve
-                configuration consistency, and modernize network infrastructure
-                using Python, Netmiko, Ansible, REST APIs and Cisco automation.
+                and consulting for Cisco and SD-WAN environments. We help
+                organizations automate configuration, deployment, validation and
+                network operations using Python, Netmiko, Ansible, REST APIs and
+                Cisco automation technologies.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
