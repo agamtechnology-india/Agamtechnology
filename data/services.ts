@@ -1,5 +1,10 @@
 export const services = [
   {
+    title: "AI Solutions",
+    description:
+      "AI infrastructure, intelligent network automation, AIOps, and enterprise AI solutions.",
+  },
+  {
     title: "Enterprise Networking",
     description:
       "Design, deployment, and support for enterprise network infrastructure.",

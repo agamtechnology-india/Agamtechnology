@@ -12,21 +12,17 @@ export default function Navbar() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 h-20 border-b border-slate-800 bg-slate-950/95 backdrop-blur">
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
-
         {/* Company Logo */}
-       <Link
-  href="/"
-  className="relative h-[72px] w-[225px] shrink-0"
->
-  <Image
-    src="/images/agamtechnology-navbar-logo.png"
-    alt="Agam Technology"
-    fill
-    priority
-    sizes="225px"
-    className="object-contain object-left"
-  />
-</Link>
+        <Link href="/" className="relative h-[72px] w-[225px] shrink-0">
+          <Image
+            src="/images/agamtechnology-navbar-logo.png"
+            alt="Agam Technology"
+            fill
+            priority
+            sizes="225px"
+            className="object-contain object-left"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden gap-6 text-sm font-medium lg:flex">
@@ -46,6 +42,15 @@ export default function Navbar() {
             <a href="#services" className="hover:text-blue-400">
               Services
             </a>
+          </li>
+
+          <li>
+            <Link
+              href="/services/ai-solutions"
+              className="font-semibold text-blue-400 hover:text-cyan-400"
+            >
+              AI Solutions
+            </Link>
           </li>
 
           <li>
@@ -91,7 +96,6 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="border-t border-slate-800 bg-slate-950 lg:hidden">
           <ul className="flex flex-col space-y-4 px-6 py-6 text-sm font-medium">
-
             <li>
               <a
                 href="#home"
@@ -123,6 +127,16 @@ export default function Navbar() {
             </li>
 
             <li>
+              <Link
+                href="/services/ai-solutions"
+                onClick={() => setIsMenuOpen(false)}
+                className="font-semibold text-blue-400 hover:text-cyan-400"
+              >
+                AI Solutions
+              </Link>
+            </li>
+
+            <li>
               <a
                 href="#technologies"
                 onClick={() => setIsMenuOpen(false)}
@@ -151,7 +165,6 @@ export default function Navbar() {
                 Contact
               </a>
             </li>
-
           </ul>
         </div>
       )}
