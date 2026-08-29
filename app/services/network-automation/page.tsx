@@ -11,9 +11,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Network Automation Services & Consulting",
+  title:
+    "Network Automation Services | Cisco, Python, Netmiko & Ansible | Agam Technology",
   description:
-    "Agam Technology provides enterprise network automation services using Python, Netmiko, Ansible, REST APIs and Cisco automation to streamline network configuration, operations and infrastructure management.",
+    "Agam Technology provides enterprise network automation services using Cisco, Python, Netmiko, Ansible and REST APIs to automate configuration, deployment, validation and network operations.",
   keywords: [
     "network automation services",
     "network automation consulting",
@@ -82,6 +83,12 @@ const capabilities = [
     title: "Ansible Automation",
     description:
       "Build repeatable infrastructure workflows using Ansible for configuration and operational consistency.",
+  },
+  {
+    icon: Network,
+    title: "SD-WAN Automation",
+    description:
+      "Automate repeatable Cisco SD-WAN workflows using centralized orchestration, Python and REST APIs to improve deployment consistency and operational efficiency.",
   },
 ];
 
@@ -348,8 +355,9 @@ export default function NetworkAutomationPage() {
             </h2>
 
             <p className="mt-4 max-w-3xl leading-8 text-slate-400">
-              Explore our enterprise network automation project using Python,
-              Netmiko and Cisco IOS to automate network configuration.
+              Explore our enterprise network automation projects covering Cisco
+              network automation, Python and Netmiko, Cisco ACI data center
+              infrastructure, and Cisco SD-WAN automation
             </p>
 
             <Link
