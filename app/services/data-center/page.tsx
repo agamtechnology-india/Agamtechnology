@@ -198,11 +198,11 @@ export default function DataCenterPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Agam Technology provides enterprise data center solutions and
-                consulting for Cisco data center infrastructure, Cisco ACI,
-                Cisco Nexus, data center networking, virtualization and
-                infrastructure modernization. We help businesses design
-                scalable, secure and reliable data center environments.
+                Agam Technology provides Cisco data center services for
+                enterprise networking, Cisco ACI, Cisco Nexus, data center
+                network design, virtualization integration and infrastructure
+                modernization. Our services help organizations build scalable,
+                secure and reliable data center environments.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -224,7 +224,27 @@ export default function DataCenterPage() {
             </div>
           </div>
         </section>
+        <section className="border-t border-slate-800 px-6 py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <span className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+                Data Center Services
+              </span>
 
+              <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+                Cisco Data Center Services & Consulting
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-slate-400">
+                Agam Technology provides Cisco data center services for
+                enterprise networking, Cisco ACI, Cisco Nexus, data center
+                network design, virtualization integration and infrastructure
+                modernization. Our services help organizations build scalable,
+                secure and reliable data center environments.
+              </p>
+            </div>
+          </div>
+        </section>
         {/* Capabilities */}
         <section className="border-t border-slate-800 px-6 py-20">
           <div className="mx-auto max-w-6xl">
