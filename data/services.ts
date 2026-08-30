@@ -15,6 +15,11 @@ export const services = [
       "AI-ready networking, data center, cloud and infrastructure automation solutions for modern enterprise workloads.",
   },
   {
+    title: "Enterprise Generative AI",
+    description:
+      "Enterprise AI copilots, knowledge assistants, RAG, workflow automation and secure generative AI solutions.",
+  },
+  {
     title: "Enterprise Networking",
     description:
       "Design, deployment, and support for enterprise network infrastructure.",

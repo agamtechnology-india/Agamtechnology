@@ -5,6 +5,7 @@ const serviceLinks: Record<string, string> = {
   "AI Solutions": "/services/ai-solutions",
   AIOps: "/services/aiops",
   "AI Infrastructure": "/services/ai-infrastructure",
+  "Enterprise Generative AI": "/services/enterprise-generative-ai",
   "Enterprise Networking": "/services/enterprise-networking",
   "Network Automation": "/services/network-automation",
   "Cloud Solutions": "/services/cloud-solutions",
