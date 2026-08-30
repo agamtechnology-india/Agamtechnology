@@ -40,9 +40,10 @@ export default function Services() {
             </span>
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-400">
-            Enterprise networking, network automation, cloud, data center,
-            cybersecurity and IT consulting services designed to automate,
-            secure and modernize your infrastructure.
+            Enterprise networking, AI solutions, AI infrastructure, AIOps,
+            network automation, cloud, data center, cybersecurity and IT
+            consulting services designed to automate, secure and modernize
+            enterprise infrastructure.
           </p>
         </div>
 
