@@ -135,6 +135,30 @@ const generativeAISchema = {
   },
   serviceType: "Enterprise Generative AI Services",
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.agamtechnology.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.agamtechnology.com/#services",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Enterprise Generative AI",
+      item: "https://www.agamtechnology.com/services/enterprise-generative-ai",
+    },
+  ],
+};
 
 export default function EnterpriseGenerativeAIPage() {
   return (
@@ -143,6 +167,12 @@ export default function EnterpriseGenerativeAIPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(generativeAISchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

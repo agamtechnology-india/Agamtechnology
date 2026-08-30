@@ -142,6 +142,30 @@ const aiInfrastructureSchema = {
   },
   serviceType: "AI Infrastructure Services",
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.agamtechnology.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.agamtechnology.com/#services",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "AI Infrastructure",
+      item: "https://www.agamtechnology.com/services/ai-infrastructure",
+    },
+  ],
+};
 
 export default function AIInfrastructurePage() {
   return (
@@ -150,6 +174,12 @@ export default function AIInfrastructurePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(aiInfrastructureSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
