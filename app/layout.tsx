@@ -17,14 +17,19 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Network Automation & IT Infrastructure Consulting | Agam Technology",
+      "AI & Network Automation | Enterprise IT Infrastructure | Agam Technology",
     template: "%s | Agam Technology",
   },
 
   description:
-    "Agam Technology provides network automation, enterprise networking, Cisco ACI, SD-WAN, cloud, data center and cybersecurity consulting for modern businesses.",
+    "Agam Technology provides AI solutions, AI infrastructure, AIOps, network automation, enterprise networking, cloud, data center and cybersecurity services for modern businesses.",
 
   keywords: [
+    "AI solutions",
+    "AI infrastructure",
+    "AIOps",
+    "AI network automation",
+    "enterprise generative AI",
     "network automation",
     "network automation services",
     "enterprise networking",
@@ -40,11 +45,12 @@ export const metadata: Metadata = {
     "network consultant India",
     "IT infrastructure services",
   ],
+
   openGraph: {
     title:
-      "Network Automation & IT Infrastructure Consulting | Agam Technology",
+      "AI & Network Automation | Enterprise IT Infrastructure | Agam Technology",
     description:
-      "Enterprise networking, network automation, Cisco ACI, SD-WAN, cloud, data center and cybersecurity consulting.",
+      "AI solutions, AI infrastructure, AIOps, network automation, enterprise networking, cloud, data center and cybersecurity services.",
     url: "https://www.agamtechnology.com",
     siteName: "Agam Technology",
     type: "website",
@@ -53,7 +59,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agam Technology - Network Automation and IT Infrastructure Consulting",
+        alt: "Agam Technology - AI and Network Automation Services",
       },
     ],
   },

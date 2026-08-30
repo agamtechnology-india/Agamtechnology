@@ -21,8 +21,27 @@ export default function StructuredData() {
     name: "Agam Technology",
     url: "https://www.agamtechnology.com/",
     description:
-      "Agam Technology provides enterprise networking, network automation, SD-WAN, Cisco ACI, cloud and IT infrastructure solutions for modern businesses.",
+      "Agam Technology provides AI solutions, AI infrastructure, AIOps, network automation, enterprise networking, cloud, data center and cybersecurity services for modern businesses.",
     publisher: {
+      "@type": "Organization",
+      name: "Agam Technology",
+      url: "https://www.agamtechnology.com/",
+    },
+  };
+
+  const webpageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "AI & Network Automation | Enterprise IT Infrastructure | Agam Technology",
+    description:
+      "Agam Technology provides AI solutions, AI infrastructure, AIOps, network automation, enterprise networking, cloud, data center and cybersecurity services for modern businesses.",
+    url: "https://www.agamtechnology.com/",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Agam Technology",
+      url: "https://www.agamtechnology.com/",
+    },
+    about: {
       "@type": "Organization",
       name: "Agam Technology",
       url: "https://www.agamtechnology.com/",
@@ -42,6 +61,13 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webpageSchema),
         }}
       />
     </>
