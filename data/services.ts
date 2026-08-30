@@ -5,6 +5,11 @@ export const services = [
       "AI infrastructure, intelligent network automation, AIOps, and enterprise AI solutions.",
   },
   {
+    title: "AIOps",
+    description:
+      "Intelligent infrastructure operations using AI-driven monitoring, anomaly detection, event correlation, and operational insights.",
+  },
+  {
     title: "Enterprise Networking",
     description:
       "Design, deployment, and support for enterprise network infrastructure.",
