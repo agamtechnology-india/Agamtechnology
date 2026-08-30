@@ -3,10 +3,28 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-       url: "https://www.agamtechnology.com/services/it-consulting",
-       lastModified: new Date(),
-       changeFrequency: "monthly",
-       priority: 0.9,
+      url: "https://www.agamtechnology.com/services/ai-solutions",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.agamtechnology.com/services/ai-network-automation",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.agamtechnology.com/services/aiops",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.agamtechnology.com/services/it-consulting",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: "https://www.agamtechnology.com/services/cyber-security",
