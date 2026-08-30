@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.agamtechnology.com/services/ai-infrastructure",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.agamtechnology.com/services/it-consulting",
       lastModified: new Date(),
       changeFrequency: "monthly",

@@ -10,6 +10,11 @@ export const services = [
       "Intelligent infrastructure operations using AI-driven monitoring, anomaly detection, event correlation, and operational insights.",
   },
   {
+    title: "AI Infrastructure",
+    description:
+      "AI-ready networking, data center, cloud and infrastructure automation solutions for modern enterprise workloads.",
+  },
+  {
     title: "Enterprise Networking",
     description:
       "Design, deployment, and support for enterprise network infrastructure.",
