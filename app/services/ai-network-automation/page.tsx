@@ -12,8 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "AI Network Automation Services | Cisco, Python & AIOps",
+  title: "AI Network Automation Services | Cisco, Python & AIOps",
   description:
     "Agam Technology provides AI network automation services using Cisco networking, Python, Netmiko, Ansible, REST APIs and AIOps to automate configuration, monitoring, troubleshooting and network operations.",
   keywords: [
@@ -207,10 +206,10 @@ export default function AINetworkAutomationPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-              Agam Technology combines artificial intelligence, network
-              automation and enterprise networking technologies to help
-              organizations automate operations, improve visibility and
-              accelerate network troubleshooting.
+              Agam Technology provides AI network automation services that
+              combine artificial intelligence, Cisco networking, Python, APIs
+              and AIOps to automate network operations, improve infrastructure
+              visibility and accelerate troubleshooting.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -256,9 +255,10 @@ export default function AINetworkAutomationPage() {
               </p>
 
               <p className="mt-5 leading-8 text-slate-400">
-                Our approach focuses on practical use cases such as automated
-                configuration, network validation, anomaly identification,
-                troubleshooting assistance and operational intelligence.
+                Our AI network automation approach focuses on practical use
+                cases such as automated configuration, network validation,
+                anomaly identification, troubleshooting assistance, SD-WAN
+                automation and intelligent network operations.
               </p>
             </div>
           </div>
@@ -421,8 +421,9 @@ export default function AINetworkAutomationPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-400">
-              Discuss how AI, automation and enterprise networking can work
-              together in your environment.
+              Discuss AI network automation, Cisco network automation, SD-WAN
+              automation and intelligent network operations for your enterprise
+              environment.
             </p>
 
             <Link
