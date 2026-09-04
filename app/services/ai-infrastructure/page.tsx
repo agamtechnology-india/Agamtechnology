@@ -84,7 +84,7 @@ const capabilities = [
     icon: Workflow,
     title: "Infrastructure Automation",
     description:
-      "Use Python, Ansible, APIs and network automation to improve infrastructure consistency and accelerate deployment workflows.",
+      "Use Python, Ansible, APIs and AI infrastructure automation to improve infrastructure consistency, accelerate deployment workflows and support scalable AI environments.",
   },
   {
     icon: Activity,
@@ -205,16 +205,18 @@ export default function AIInfrastructurePage() {
             </span>
 
             <h1 className="mt-6 max-w-5xl text-4xl font-bold leading-tight md:text-6xl">
-              AI-Ready{" "}
+              AI Infrastructure{" "}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Infrastructure
+                Solutions for Enterprise AI Workloads
               </span>
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-              Agam Technology helps enterprises prepare networking, data center,
-              cloud and automation environments for modern AI workloads with
-              scalable and reliable infrastructure architectures.
+              Agam Technology provides AI infrastructure solutions for
+              enterprise AI workloads across networking, data centers, cloud and
+              automation. Our AI infrastructure services help organizations
+              build scalable, reliable and automation-ready environments for
+              modern AI adoption.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
