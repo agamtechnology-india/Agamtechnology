@@ -202,11 +202,12 @@ export default function DataCenterPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400 md:text-xl">
-                Agam Technology provides Cisco data center services for
-                enterprise networking, Cisco ACI, Cisco Nexus, data center
-                network design, virtualization integration and infrastructure
-                modernization. Our services help organizations build scalable,
-                secure and reliable data center environments.
+                Agam Technology provides Cisco data center services and
+                solutions for enterprise environments, including Cisco ACI,
+                Cisco Nexus, data center network design, consulting,
+                virtualization and infrastructure modernization. We help
+                organizations build scalable, secure and reliable data center
+                architectures.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -240,12 +241,12 @@ export default function DataCenterPage() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-400">
-                Agam Technology delivers Cisco data center services and
-                solutions for enterprise environments, including Cisco ACI,
-                Cisco Nexus switching, data center network design, network
-                virtualization and infrastructure modernization. We help
+                Agam Technology delivers Cisco data center services, solutions
+                and consulting for enterprise environments. Our expertise covers
+                Cisco ACI, Cisco Nexus switching, data center network design,
+                network virtualization and infrastructure modernization. We help
                 organizations design scalable, secure and reliable data center
-                architectures aligned with business and application
+                architectures aligned with business, application and workload
                 requirements.
               </p>
             </div>
@@ -361,8 +362,8 @@ export default function DataCenterPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-              Talk to Agam Technology about your data center networking, Cisco
-              ACI, Nexus and infrastructure requirements.
+              Talk to Agam Technology about Cisco data center services, ACI,
+              Nexus, network design and infrastructure modernization.
             </p>
 
             <Link
