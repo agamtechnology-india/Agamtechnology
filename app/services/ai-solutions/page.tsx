@@ -204,11 +204,11 @@ export default function AISolutionsPage() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-slate-300 md:text-xl">
-                Agam Technology helps organizations adopt practical AI
-                capabilities across networking, data center, cloud and IT
-                infrastructure. We combine AI, network automation and modern
-                infrastructure technologies to improve operational efficiency,
-                scalability and visibility.
+                Agam Technology provides AI solutions and AI infrastructure
+                services for enterprise networking, data centers, cloud and IT
+                environments. We combine AI, network automation, AIOps and
+                enterprise AI technologies to improve operational efficiency,
+                scalability and infrastructure visibility.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -252,9 +252,12 @@ export default function AISolutionsPage() {
                 </p>
 
                 <p className="mt-5 leading-8 text-slate-300">
-                  Our approach connects AI capabilities with proven
-                  infrastructure technologies such as Cisco networking, Python,
-                  REST APIs, Ansible and cloud platforms.
+                  Our AI solutions connect AI capabilities with proven
+                  enterprise infrastructure technologies such as Cisco
+                  networking, Python, REST APIs, Ansible and cloud platforms.
+                  This enables practical AI infrastructure, network automation
+                  and intelligent IT operations without requiring organizations
+                  to replace their existing infrastructure.
                 </p>
               </div>
 
@@ -404,8 +407,8 @@ export default function AISolutionsPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-400">
-              Talk to Agam Technology about AI infrastructure, network
-              automation, AIOps or enterprise AI opportunities for your
+              Talk to Agam Technology about AI solutions, AI infrastructure,
+              network automation, AIOps and enterprise AI services for your
               organization.
             </p>
 
